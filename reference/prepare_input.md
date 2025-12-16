@@ -1,0 +1,131 @@
+# Prepare Model input
+
+Prepare Model input
+
+## Usage
+
+``` r
+prepare_input(
+  temporal_resolution = "days",
+  config = config_read(),
+  cso = kwb.BerlinWaterModel.public::cso,
+  inflows = kwb.BerlinWaterModel.public::inflows,
+  rain = kwb.BerlinWaterModel.public::rain,
+  evapo_p = kwb.BerlinWaterModel.public::evapo_p,
+  shares_timeseries = kwb.BerlinWaterModel.public::shares_timeseries,
+  ww = kwb.BerlinWaterModel.public::ww,
+  wwtp = kwb.BerlinWaterModel.public::wwtp,
+  bfshare_dynamic = FALSE,
+  share_wwtp_sch_to_nordgraben_timeseries = TRUE,
+  share_wwtp_sch_panke_1 = 0.1,
+  date_separation_panke_1_2 = "2015-04-15",
+  share_wwtp_sch_panke_2 = 0.9,
+  col_wwtp_sch = "Q_KW_SCH",
+  col_wwtp_sch_nordgraben = "Q_KW_SCH_Nordgraben",
+  col_wwtp_sch_panke = "Q_KW_SCH_Panke",
+  col_panke_baseflow_no_Q_wwtp = "Panke_baseflow_no_Q_KW_SCH_Panke",
+  date_min = "2002-01-01",
+  date_max = "2022-12-31",
+  debug = TRUE
+)
+```
+
+## Arguments
+
+- temporal_resolution:
+
+  specify temporal resolution of model input dataset. (default: "days").
+  Valid options are: "days" or "hours"
+
+- config:
+
+  model network configuration (as retrieved by
+  [`config_read`](https://kwb-r.github.io/kwb.BerlinWaterModel.public/reference/config_read.md))
+
+- cso:
+
+  cso dataset (default: kwb.BerlinWaterModel.public::cso)
+
+- inflows:
+
+  inflows dataset (default: kwb.BerlinWaterModel.public::inflows)
+
+- rain:
+
+  rain dataset (default: kwb.BerlinWaterModel.public::rain)
+
+- evapo_p:
+
+  evaporation dataset (default: kwb.BerlinWaterModel.public::evapo_p)
+
+- shares_timeseries:
+
+  shares timeseries dataset (default:
+  kwb.BerlinWaterModel.public::shares_timeseries)
+
+- ww:
+
+  waterworks dataset (default: kwb.BerlinWaterModel.public::ww)
+
+- wwtp:
+
+  wastewater treatment plant dataset (default:
+  kwb.BerlinWaterModel.public::wwtp)
+
+- bfshare_dynamic:
+
+  should dynamic bankfiltration shares be used or the static ones
+  contained in column "bank_filtration_share" of config\$flows_in_out
+
+- share_wwtp_sch_to_nordgraben_timeseries:
+
+  if TRUE time series to "Nordgraben" is used (column name defined in
+  parameter "col_wwtp_sch_nordgraben") and remaining water is transfered
+  to "Panke" (column name defined in parameter "col_wwtp_sch_panke")
+
+- share_wwtp_sch_panke_1:
+
+  share of WWTP Schoenerlinde to Panke before (default: 0.9)
+  date_separation_panke_1_2; only used if
+  share_wwtp_sch_to_nordgraben_timeseries == FALSE
+
+- date_separation_panke_1_2:
+
+  date to separate shares before (i.e. share_wwtp_sch_panke_1) and after
+  (share_wwtp_sch_panke_2) given date (default: "2025-04-15") (default:
+  1 - share_wwtp_sch_panke); only used if
+  share_wwtp_sch_to_nordgraben_timeseries == FALSE
+
+- col_wwtp_sch:
+
+  column name of WWTP Schoenerlinde (default: "Q_KW_SCH")
+
+- col_wwtp_sch_nordgraben:
+
+  column name of WWTP Schoenerlinde outflow to Nordgraben (default:
+  "Q_KW_SCH_Nordgraben")
+
+- col_wwtp_sch_panke:
+
+  column name of WWTP Schoenerlinde outflow to Panke (default:
+  "Q_KW_SCH_Panke")
+
+- col_panke_baseflow_no_Q_wwtp:
+
+  (default: "Panke_baseflow_no_Q_KW_SCH_Panke")
+
+- date_min:
+
+  minimum date, i.e. start of simulation (default: "2002-01-01)
+
+- date_max:
+
+  maximum date, i.e. end of simulation (default: "2022-12-31)
+
+- debug:
+
+  print debug messages (default: TRUE)
+
+## Value
+
+input dataset, will be filled in case temporal resolution in increased
