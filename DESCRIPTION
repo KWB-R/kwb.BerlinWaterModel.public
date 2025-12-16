@@ -11,8 +11,8 @@ Authors@R: c(
   )
 Description: R Package of Berlin Water Model.
 License: MIT + file LICENSE
-URL: https://github.com/KWB-R/kwb.BerlinWaterModel
-BugReports: https://github.com/KWB-R/kwb.BerlinWaterModel/issues
+URL: https://github.com/KWB-R/kwb.BerlinWaterModel.public
+BugReports: https://github.com/KWB-R/kwb.BerlinWaterModel.public/issues
 Depends: 
     R (>= 3.5)
 Imports: 

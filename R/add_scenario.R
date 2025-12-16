@@ -24,12 +24,12 @@ if(use_scenario) {
                                                ifelse(scaling_factor > 1, 100*(scaling_factor - 1), ifelse(scaling_factor == 1, 0, 100*(1-scaling_factor)))),
                          expr = {
 
-                           kwb.BerlinWaterModel::cso %>%
+                           kwb.BerlinWaterModel.public::cso %>%
                              dplyr::mutate(cbm_per_second = cbm_per_second * scaling_factor)
                          },
                          dbg = debug)} else {
                            message("No scaling_factor defined in 'config$scenarios' for flow_type == 'cso'. Please define in config/scenarios.csv' if needed. Using dataset 'cso' from R packag kwb.BerlinWaterModel!")
-                           kwb.BerlinWaterModel::cso
+                           kwb.BerlinWaterModel.public::cso
                          }
 
   evapo_p <- if(sum(tolower(config$scenarios$flow_type) == "evaporation_potential") == 1) {
@@ -42,17 +42,17 @@ if(use_scenario) {
                                                ifelse(scaling_factor > 1, 100*(scaling_factor - 1), ifelse(scaling_factor == 1, 0, 100*(1-scaling_factor)))),
                          expr = {
 
-                           kwb.BerlinWaterModel::evapo_p %>%
+                           kwb.BerlinWaterModel.public::evapo_p %>%
                              dplyr::mutate(mean = mean * scaling_factor)
                          },
                          dbg = debug)} else {
                            message("No scaling_factor defined in 'config$scenarios' for flow_type == 'evaporation_potential'. Please define in config/scenarios.csv' if needed. Using dataset 'evapo_p' from R packag kwb.BerlinWaterModel!")
-                           kwb.BerlinWaterModel::evapo_p
+                           kwb.BerlinWaterModel.public::evapo_p
                          }
 
   inflows <- if(any(tolower(config$scenarios$flow_type) == "inlet")) {
 
-    inflows_adapted <- kwb.BerlinWaterModel::inflows %>%
+    inflows_adapted <- kwb.BerlinWaterModel.public::inflows %>%
       dplyr::left_join(config$scenarios %>%
                          dplyr::select(flow_id, scaling_factor) %>%
                          dplyr::rename(id = flow_id) %>%
@@ -71,7 +71,7 @@ if(use_scenario) {
                                                nrow(inflows_adapted),
                                                paste0(inflows_adapted$label, collapse = "\n")),
                          expr = {
-                           kwb.BerlinWaterModel::inflows %>%
+                           kwb.BerlinWaterModel.public::inflows %>%
                              dplyr::left_join(config$scenarios %>%
                                                 dplyr::select(flow_id, scaling_factor) %>%
                                                 dplyr::rename(id = flow_id) %>%
@@ -84,7 +84,7 @@ if(use_scenario) {
                          },
                          dbg = debug)} else {
                            message("No scaling_factor defined in 'config$scenarios' for flow_type == 'inlet'. Please define in config/scenarios.csv' if needed. Using dataset 'inflows' from R packag kwb.BerlinWaterModel!")
-                           kwb.BerlinWaterModel::inflows
+                           kwb.BerlinWaterModel.public::inflows
                          }
 
   rain <- if(sum(tolower(config$scenarios$flow_type) == "rain") == 1) {
@@ -97,18 +97,18 @@ if(use_scenario) {
                                                ifelse(scaling_factor > 1, 100*(scaling_factor - 1), ifelse(scaling_factor == 1, 0, 100*(1-scaling_factor)))),
                          expr = {
 
-                           kwb.BerlinWaterModel::rain %>%
+                           kwb.BerlinWaterModel.public::rain %>%
                              dplyr::mutate(DWD_0433 = DWD_0433 * scaling_factor)
                          },
                          dbg = debug)} else {
                            message("No scaling_factor defined in 'config$scenarios' for flow_type == 'rain'. Please define in config/scenarios.csv' if needed. Using dataset 'rain' from R packag kwb.BerlinWaterModel!")
-                           kwb.BerlinWaterModel::rain
+                           kwb.BerlinWaterModel.public::rain
                          }
 
   ww <- if(any(stringr::str_detect(tolower(config$scenarios$flow_type), pattern = "^ww_|_ww$"))) {
 
 
-    ww_adapted <- kwb.BerlinWaterModel::ww %>%
+    ww_adapted <- kwb.BerlinWaterModel.public::ww %>%
       dplyr::mutate(flow_category = stringr::str_sub(id, 1,3)) %>%
       dplyr::left_join(config$scenarios %>%
                          dplyr::select(flow_category, scaling_factor) %>%
@@ -127,7 +127,7 @@ if(use_scenario) {
                                                nrow(ww_adapted),
                                                paste0(ww_adapted$label, collapse = "\n")),
                          expr = {
-                           kwb.BerlinWaterModel::ww %>%
+                           kwb.BerlinWaterModel.public::ww %>%
                              dplyr::mutate(flow_category = stringr::str_sub(id, 1,3)) %>%
                              dplyr::left_join(config$scenarios %>%
                                                 dplyr::select(flow_category, scaling_factor) %>%
@@ -140,12 +140,12 @@ if(use_scenario) {
                          },
                          dbg = debug)} else {
                            message("No scaling_factor defined in 'config$scenarios' for flow_type 'ww_|_ww'. Please define in config/scenarios.csv' if needed. Using dataset 'ww' from R packag kwb.BerlinWaterModel!")
-                           kwb.BerlinWaterModel::ww
+                           kwb.BerlinWaterModel.public::ww
                          }
 
   wwtp <- if(any(tolower(config$scenarios$flow_type) == "wwtp")) {
 
-    wwtp_adapted <- kwb.BerlinWaterModel::wwtp %>%
+    wwtp_adapted <- kwb.BerlinWaterModel.public::wwtp %>%
       dplyr::mutate(flow_category = stringr::str_sub(id, 6,8)) %>%
       dplyr::left_join(config$scenarios %>%
                          dplyr::select(flow_category, scaling_factor) %>%
@@ -164,7 +164,7 @@ if(use_scenario) {
                                                nrow(wwtp_adapted),
                                                paste0(wwtp_adapted$label, collapse = "\n")),
                          expr = {
-                           kwb.BerlinWaterModel::wwtp %>%
+                           kwb.BerlinWaterModel.public::wwtp %>%
                              dplyr::mutate(flow_category = stringr::str_sub(id, 6,8)) %>%
                              dplyr::left_join(config$scenarios %>%
                                                 dplyr::select(flow_category, scaling_factor) %>%
@@ -177,17 +177,17 @@ if(use_scenario) {
                          },
                          dbg = debug)} else {
                            message("No scaling_factor defined in 'config$scenarios' for flow_type == 'wwtp'. Please define in config/scenarios.csv' if needed. Using dataset 'wwtp' from R packag kwb.BerlinWaterModel!")
-                           kwb.BerlinWaterModel::wwtp
+                           kwb.BerlinWaterModel.public::wwtp
                          }
 
 } else {
   message("No scenario selected. Using datasets (i.e. 'cso', 'evapo_p', 'inflows', 'rain', 'ww', 'wwtp') provided with R packag 'kwb.BerlinWaterModel'.")
-  cso <- kwb.BerlinWaterModel::cso
-  evapo_p <- kwb.BerlinWaterModel::evapo_p
-  inflows <- kwb.BerlinWaterModel::inflows
-  rain <-  kwb.BerlinWaterModel::rain
-  ww <- kwb.BerlinWaterModel::ww
-  wwtp <- kwb.BerlinWaterModel::wwtp
+  cso <- kwb.BerlinWaterModel.public::cso
+  evapo_p <- kwb.BerlinWaterModel.public::evapo_p
+  inflows <- kwb.BerlinWaterModel.public::inflows
+  rain <-  kwb.BerlinWaterModel.public::rain
+  ww <- kwb.BerlinWaterModel.public::ww
+  wwtp <- kwb.BerlinWaterModel.public::wwtp
 }
 
 list(cso = cso,

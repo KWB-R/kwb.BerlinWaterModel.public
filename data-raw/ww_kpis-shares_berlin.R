@@ -2,20 +2,20 @@ library(kwb.BerlinWaterModel)
 
 # read config files ##########################################################
 
-config <- kwb.BerlinWaterModel::config_read(config_dir = "inst/extdata/config/network_complete")
-#config <- kwb.BerlinWaterModel::config_read(config_dir = "inst/extdata/config/network_complete_mean-start-conc")
-#config <- kwb.BerlinWaterModel::config_read(config_dir = "inst/extdata/config/network_complete_2019")
+config <- kwb.BerlinWaterModel.public::config_read(config_dir = "inst/extdata/config/network_complete")
+#config <- kwb.BerlinWaterModel.public::config_read(config_dir = "inst/extdata/config/network_complete_mean-start-conc")
+#config <- kwb.BerlinWaterModel.public::config_read(config_dir = "inst/extdata/config/network_complete_2019")
 
-config <- kwb.BerlinWaterModel::add_rain_direct_and_evaporation(config)
+config <- kwb.BerlinWaterModel.public::add_rain_direct_and_evaporation(config)
 
-config <- kwb.BerlinWaterModel::add_tracers(config)
+config <- kwb.BerlinWaterModel.public::add_tracers(config)
 
-config <- kwb.BerlinWaterModel::add_substances(config)
+config <- kwb.BerlinWaterModel.public::add_substances(config)
 
-network <- kwb.BerlinWaterModel::prepare_network(config)
+network <- kwb.BerlinWaterModel.public::prepare_network(config)
 
 
-#kwb.BerlinWaterModel::check_network_errors(network)
+#kwb.BerlinWaterModel.public::check_network_errors(network)
 
 # adaptation of inflow concentrations
 # Havel
@@ -37,7 +37,7 @@ config$flows_in_out$conc_ValsartansaeureAeq.mg.m3[config$flows_in_out$flow_id ==
 #plot_network_simple(network)
 
 ### Network graph: complex
-#net_complex <- kwb.BerlinWaterModel::plot_network_complex(network,
+#net_complex <- kwb.BerlinWaterModel.public::plot_network_complex(network,
 #                                                        config,
 #                                                        show_labels = TRUE)
 
@@ -55,7 +55,7 @@ col_date_or_datetime <- ifelse(temporal_resolution == "hours",
 
 use_scenario <- TRUE
 
-inputs <- kwb.BerlinWaterModel::add_scenario(
+inputs <- kwb.BerlinWaterModel.public::add_scenario(
   config = config,
   use_scenario = use_scenario, # should scaling factors be used (in config$scenarios) or not?
   debug = TRUE)
@@ -64,7 +64,7 @@ inputs <- kwb.BerlinWaterModel::add_scenario(
 date_min <- "2002-01-01"
 date_max <- "2022-12-31"
 
-input_list <- kwb.BerlinWaterModel::prepare_input(temporal_resolution = temporal_resolution,
+input_list <- kwb.BerlinWaterModel.public::prepare_input(temporal_resolution = temporal_resolution,
                                                   config = config,
                                                   cso = inputs$cso,
                                                   inflows = inputs$inflows,
@@ -83,7 +83,7 @@ input_list <- kwb.BerlinWaterModel::prepare_input(temporal_resolution = temporal
 
 # calculate flows using functions in outflows_multiple.csv for river branching
 system.time(
-  flows_dynamic <- kwb.BerlinWaterModel::calculate_flows_auto(config = config,
+  flows_dynamic <- kwb.BerlinWaterModel.public::calculate_flows_auto(config = config,
                                                               input_list = input_list,
                                                               network = network,
                                                               use_dynamic = TRUE,
@@ -91,7 +91,7 @@ system.time(
 )
 
 
-flow_stats <- kwb.BerlinWaterModel::calculate_flow_stats(flows = flows_dynamic)
+flow_stats <- kwb.BerlinWaterModel.public::calculate_flow_stats(flows = flows_dynamic)
 
 openxlsx::write.xlsx(flow_stats,
                      sprintf("surface-water_kpis_scenario-%s.xlsx",
@@ -134,7 +134,7 @@ ww_galleries_lookup <- ww_galleries %>%
     n_rows = purrr::map_int(data, nrow),
     kpis   = purrr::map(
       data,
-      ~ kwb.BerlinWaterModel::compute_gallery_kpis(
+      ~ kwb.BerlinWaterModel.public::compute_gallery_kpis(
         df                = .x,
         gallery_col       = "gallery",
         date_col          = "date",
@@ -153,9 +153,9 @@ ww_galleries_lookup <- ww_galleries %>%
   )
 
 
-kpis <- list(per_gallery = kwb.BerlinWaterModel::get_gallery_kpis_per_gallery(ww_galleries_lookup),
-             per_year = kwb.BerlinWaterModel::get_gallery_kpis_per_year(ww_galleries_lookup),
-             per_month = kwb.BerlinWaterModel::get_gallery_kpis_per_month(ww_galleries_lookup))
+kpis <- list(per_gallery = kwb.BerlinWaterModel.public::get_gallery_kpis_per_gallery(ww_galleries_lookup),
+             per_year = kwb.BerlinWaterModel.public::get_gallery_kpis_per_year(ww_galleries_lookup),
+             per_month = kwb.BerlinWaterModel.public::get_gallery_kpis_per_month(ww_galleries_lookup))
 
 openxlsx::write.xlsx(kpis,
                      sprintf("ww-galleries_kpis_scenario-%s.xlsx",
@@ -167,7 +167,7 @@ pdff <- sprintf("rohwasserquellen_berlinweit_scenario-%s.pdf", ifelse(use_scenar
 
 kwb.utils::preparePdf(pdfFile = pdff, landscape = TRUE)
 
-input_list <- kwb.BerlinWaterModel::prepare_input(temporal_resolution = temporal_resolution,
+input_list <- kwb.BerlinWaterModel.public::prepare_input(temporal_resolution = temporal_resolution,
                                                   config = config,
                                                   cso = inputs$cso,
                                                   inflows = inputs$inflows,
@@ -344,7 +344,7 @@ gg2 <- ww_berlin %>%
 gg2
 
 
-input_list <- kwb.BerlinWaterModel::prepare_input(temporal_resolution = temporal_resolution,
+input_list <- kwb.BerlinWaterModel.public::prepare_input(temporal_resolution = temporal_resolution,
                                                   config = config,
                                                   cso = inputs$cso,
                                                   inflows = inputs$inflows,

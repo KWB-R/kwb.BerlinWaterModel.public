@@ -6,7 +6,7 @@
 \usage{
 config_read(
   config_dir = system.file("extdata/config/network_complete", package =
-    "kwb.BerlinWaterModel"),
+    "kwb.BerlinWaterModel.public"),
   file_encoding = "UTF-8"
 )
 }
@@ -26,6 +26,6 @@ list with three sublists "flows_in_out", "outflows_multiple" and
 Configuration: Read
 }
 \examples{
-\dontrun{config <- kwb.BerlinWaterModel::config_read()
+\dontrun{config <- kwb.BerlinWaterModel.public::config_read()
 config}
 }

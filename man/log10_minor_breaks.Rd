@@ -23,7 +23,7 @@ where minor breaks are not added by default.
 ggplot2::scale_y_log10(
   limits = c(0.01, 100),
   breaks = c(0.01, 0.1, 1, 10, 100),
-  minor_breaks = kwb.BerlinWaterModel::log10_minor_breaks()
+  minor_breaks = kwb.BerlinWaterModel.public::log10_minor_breaks()
 )
 }
 }

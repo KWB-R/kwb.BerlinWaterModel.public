@@ -17,7 +17,7 @@ calculate_flows_auto <- function(config, input_list, network, use_dynamic = FALS
 
 col_date_or_datetime <- names(input_list$flows)[stringr::str_detect(names(input_list$flows), "date")]
 
-links_by_orderid <- kwb.BerlinWaterModel::get_flowpath_table(outflow_id = "Out",
+links_by_orderid <- get_flowpath_table(outflow_id = "Out",
                                                              network = network,
                                                              config = config)
 
@@ -36,7 +36,7 @@ input_flows_tmp <- input_list$flows  # Falls input existiert
 
 for (i in seq_along(links_by_orderid)) {
 
-  flows_tmp[[i]] <- kwb.BerlinWaterModel::calculate_flows(
+  flows_tmp[[i]] <- calculate_flows(
     df_order = links_by_orderid[[i]],
     input = input_flows_tmp,
     shares_timeseries_wide = input_list$shares_timeseries,
@@ -52,7 +52,7 @@ for (i in seq_along(links_by_orderid)) {
 }
 
 
-flows_tmp[[length(links_by_orderid)+1]] <- kwb.BerlinWaterModel::calculate_outflows(
+flows_tmp[[length(links_by_orderid)+1]] <- calculate_outflows(
   list_order = links_by_orderid,
   input = input_flows_tmp,
   config = config,

@@ -3,13 +3,13 @@
 #' @param temporal_resolution specify temporal resolution of model input dataset.
 #' (default: "days"). Valid options are: "days" or "hours"
 #' @param config model network configuration (as retrieved by \code{\link{config_read}})
-#' @param cso cso dataset (default: kwb.BerlinWaterModel::cso)
-#' @param inflows inflows dataset (default: kwb.BerlinWaterModel::inflows)
-#' @param rain rain dataset (default: kwb.BerlinWaterModel::rain)
-#' @param evapo_p evaporation dataset (default: kwb.BerlinWaterModel::evapo_p)
-#' @param shares_timeseries shares timeseries dataset (default: kwb.BerlinWaterModel::shares_timeseries)
-#' @param ww waterworks dataset (default: kwb.BerlinWaterModel::ww)
-#' @param wwtp wastewater treatment plant dataset (default: kwb.BerlinWaterModel::wwtp)
+#' @param cso cso dataset (default: kwb.BerlinWaterModel.public::cso)
+#' @param inflows inflows dataset (default: kwb.BerlinWaterModel.public::inflows)
+#' @param rain rain dataset (default: kwb.BerlinWaterModel.public::rain)
+#' @param evapo_p evaporation dataset (default: kwb.BerlinWaterModel.public::evapo_p)
+#' @param shares_timeseries shares timeseries dataset (default: kwb.BerlinWaterModel.public::shares_timeseries)
+#' @param ww waterworks dataset (default: kwb.BerlinWaterModel.public::ww)
+#' @param wwtp wastewater treatment plant dataset (default: kwb.BerlinWaterModel.public::wwtp)
 #' @param bfshare_dynamic should dynamic bankfiltration shares be used or the static
 #' ones contained in column "bank_filtration_share" of config$flows_in_out
 #' @param share_wwtp_sch_to_nordgraben_timeseries if TRUE time series to "Nordgraben"
@@ -39,13 +39,13 @@
 #' @importFrom lubridate floor_date
 prepare_input <- function(temporal_resolution = "days",
                           config = config_read(),
-                          cso = kwb.BerlinWaterModel::cso,
-                          inflows = kwb.BerlinWaterModel::inflows,
-                          rain = kwb.BerlinWaterModel::rain,
-                          evapo_p = kwb.BerlinWaterModel::evapo_p,
-                          shares_timeseries = kwb.BerlinWaterModel::shares_timeseries,
-                          ww = kwb.BerlinWaterModel::ww,
-                          wwtp = kwb.BerlinWaterModel::wwtp,
+                          cso = kwb.BerlinWaterModel.public::cso,
+                          inflows = kwb.BerlinWaterModel.public::inflows,
+                          rain = kwb.BerlinWaterModel.public::rain,
+                          evapo_p = kwb.BerlinWaterModel.public::evapo_p,
+                          shares_timeseries = kwb.BerlinWaterModel.public::shares_timeseries,
+                          ww = kwb.BerlinWaterModel.public::ww,
+                          wwtp = kwb.BerlinWaterModel.public::wwtp,
                           bfshare_dynamic = FALSE,
                           share_wwtp_sch_to_nordgraben_timeseries = TRUE,
                           share_wwtp_sch_panke_1 = 0.1,
@@ -118,8 +118,8 @@ prepare_input <- function(temporal_resolution = "days",
     evapo_p_cbm_per_second
   } else {
     evapo_p_cbm_per_second %>%
-      kwb.BerlinWaterModel::fill_timeseries(temporal_resolution = "hours",
-                                            direction = "down")
+      fill_timeseries(temporal_resolution = "hours",
+                      direction = "down")
   }
 
   evapo_p_df_tot  <- evapo_p_df[,1] %>%

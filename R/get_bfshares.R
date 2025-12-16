@@ -1,7 +1,7 @@
 #' Get Bank Filtration shares Model input
 #'
 #' @param config model network configuration (as retrieved by \code{\link{config_read}})
-#' @param ww waterworks dataset (default: kwb.BerlinWaterModel::ww)
+#' @param ww waterworks dataset (default: kwb.BerlinWaterModel.public::ww)
 #' @param temporal_resolution specify temporal resolution of model input dataset.
 #' (default: "days"). Valid options are: "days" or "hours"
 #' @param bfshare_dynamic should dynamic bankfiltration shares be used or the static
@@ -16,7 +16,7 @@
 #' @export
 #'
 get_bfshares <- function(config,
-                         ww = kwb.BerlinWaterModel::ww,
+                         ww = kwb.BerlinWaterModel.public::ww,
                          temporal_resolution = "days",
                          bfshare_dynamic = TRUE) {
 
