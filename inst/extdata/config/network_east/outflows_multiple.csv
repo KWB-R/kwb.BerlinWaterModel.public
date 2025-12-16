@@ -1,0 +1,10 @@
+outflow_id;section_name;section_in_id;section_out_id;section_out_name;section_out_share;section_out_share_comment;section_out_function
+MO_S03;Dahme;S02;S07;Spree 1;0.9;Median tbc;Masterarbeit HS
+MO_S03;Dahme;S02;S21;Rudower Teltowkanal;0.1;1 - section_out_share_S07;
+MO_S09;Spree 2;S07;S15;Spree 3;0.86;Median, tbc;Masterarbeit HS
+MO_S09;Spree 2;S07;S12;Britzer Verbindungskanal;0.14;1 - section_out_share_S15;
+MO_S12;Britzer Verbindungskanal;S09;S22;Teltowkanal 1;0.89;aus MQ_Schuhmacher;Masterarbeit HS
+MO_S12;Britzer Verbindungskanal;S09;S13;Neuköllner SF-Kanal;0.11;1 - section_out_share_S22;
+MO_S15;Spree 3;S09;S17;Spree 4;0.54;aus MQ_Schumacher;
+MO_S15;Spree 3;S09;S18;BSS-Kanal;0.37;aus MQ_Schumacher;
+MO_S15;Spree 3;S09;S14;Landwehrkanal;0.09;aus MQ_Schumacher;

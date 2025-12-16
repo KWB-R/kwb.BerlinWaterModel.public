@@ -1,17 +1,47 @@
 Package: kwb.BerlinWaterModel.public
 Title: R Package of Berlin Water Model
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: c(
+    person("Daniel", "Wicke", , "daniel.wicke@kompetenz-wasser.de", role = "aut",
+           comment = c(ORCID = "0000-0002-5722-5433")),
     person("Michael", "Rustler", , "michael.rustler@kompetenz-wasser.de", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-0647-7726")),
+    person("IMPETUS", role = "fnd"),
     person("Kompetenzzentrum Wasser Berlin gGmbH (KWB)", role = "cph")
   )
 Description: R Package of Berlin Water Model.
 License: MIT + file LICENSE
-URL: https://github.com/KWB-R/kwb.BerlinWaterModel.public
-BugReports: https://github.com/KWB-R/kwb.BerlinWaterModel.public/issues
+URL: https://github.com/KWB-R/kwb.BerlinWaterModel
+BugReports: https://github.com/KWB-R/kwb.BerlinWaterModel/issues
+Depends: 
+    R (>= 3.5)
+Imports: 
+    dplyr,
+    ggplot2,
+    htmlwidgets,
+    igraph,
+    lubridate,
+    kwb.utils,
+    magrittr,
+    matrixStats,
+    networkD3,
+    purrr,
+    readr,
+    rlang,
+    stringr,
+    tibble,
+    tidyr,
+    tidyselect,
+    units
+Suggests: 
+    covr,
+    knitr,
+    rmarkdown
+Remotes:
+    github::kwb-r/kwb.utils
+VignetteBuilder: 
+    knitr
 Encoding: UTF-8
+LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
-Suggests: 
-    covr

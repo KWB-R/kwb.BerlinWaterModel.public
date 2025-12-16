@@ -1,0 +1,37 @@
+section_id;section_name;section_in_id;section_out_id;volume_m3;area_m2;branch_id;no_neg_flow_corr;no_transfer_section_up_neg_flow
+S01;Seddinsee und Gosener Kanal;inlet;S02;10150000;2617865;1;;
+S02;Langer See (Dahme);S01;S03;12050000;2432101;1;;
+S03;Dahme;S02;MO_S03;1380000;1532065;1;;
+S04;Müggelsee;inlet;S05a;28700000;7666521;2;;
+S05;Müggelspree;S05a;S07;314000;;2;;
+S05a;Müggelspree 2;S04;S05;664000;;2;;
+S06;Erpe (NH-MF);inlet;S05;10000;;2;;
+S07;Spree 1;S05;MO_S07;1790000;;2;;
+S08;Wuhle;inlet;S07;15000;;2;Yes;
+S09;Spree 2;S07;MO_S09;1990000;;2;;
+S10;MHG-Graben;inlet;S11;7500;;2;;
+S11;Rummelsburger See;S10;S09;870000;;2;;
+S12;Britzer Verbindungskanal;S07;MO_S12;299000;;2;;
+S13;Neuköllner SF-Kanal;S12;S14;181000;;2;Yes;
+S14;Landwehrkanal;S09;S19;484000;;4;;
+S15;Spree 3;S09;MO_S15;1354000;;2;;
+S16;Panke;inlet;MO_S16;32000;;3;;
+S17;Spree 4;S15;S19;859000;;4;;
+S18;BSS-Kanal;S15;S19;854000;;4;;
+S19;Spree 5;S17;S20;381963;;4;;
+S20;Spree 6;S19;H07;1490000;;4;;
+S21a;Rudower Teltowkanal 1;S03;S21;109000;;1;;
+S21;Rudower Teltowkanal 2;S21a;S22;514000;;1;Yes;
+S22;Teltowkanal 1;S21;S22a;2482000;;2;;
+S22a;Teltowkanal 2;S22;S23;671000;;2;Yes;
+S23;Teltowkanal 3;S22a;MO_S23;1231000;;5;;
+H01;Nordgraben;S16;H03;9000;;3;;
+H02;Tegeler Fließ;inlet;H03;12000;;3;;
+H03;Tegeler See;H01;H06;29980000;3957622;3;;Yes
+H04;Oberhavel 1;inlet;H05;6263000;;3;;
+H05;Oberhavel 2;H04;H06;2603000;2868524;3;;
+H06;Oberhavel 3;H05;H07;3544000;1141376;3;Yes;
+H07;Unterhavel 1;H06;H08;840000;;5;;
+H08;Unterhavel 2;H07;Out;61690000;13036596;5;;
+H09;Wannsee;S23;H08;16380000;2819060;5;;
+Out;Outflow Potsdamer Havel;;;;;5;;

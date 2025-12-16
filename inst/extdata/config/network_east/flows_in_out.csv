@@ -1,0 +1,28 @@
+section_id;flow_id;flow_name;rain_runoff_coefficient;rain_EZG_area_m2;ABIMO_runoff_m3/a;bank_filtration_share;flow_in_out;flow_type;Kommentar
+S01;GoK_3.41;Zufluss_Spree_Gosener Kanal;;;;;in;inlet;
+S01;WW_FRI_L;Wasserwerk Friedrichshagen L-Galerie;;;;0.86;out;abstraction_WW;
+S01;WW_FRI_M;Wasserwerk Friedrichshagen M-Galerie;;;;0.81;out;abstraction_WW;
+S01;585920;Zufluss OSK (Wernsdorf OP);;;;;in;inlet;
+S02;DaW_0.165;Zufluss Zeuthener See (Schmöckwitz);;;;;in;inlet;
+S02;WW_FRI_G;Wasserwerk Friedrichshagen G-Galerie;;;;0.63;out;abstraction_WW;
+S02;WW_FRI_K;Wasserwerk Friedrichshagen K-Galerie;;;;0.83;out;abstraction_WW;
+S03;ageb1_320;Regenabfluss Langer See, Dahme und Große Krampe;0.247;5229069;797810;;in;rain_runoff;
+S04;WW_FRI_B;Wasserwerk Friedrichshagen B-Galerie;;;;0.15;out;abstraction_WW;
+S04;WW_FRI_C;Wasserwerk Friedrichshagen C-Galerie;;;;0.95;out;abstraction_WW;
+S04;WW_FRI_D;Wasserwerk Friedrichshagen D-Galerie;;;;1.00;out;abstraction_WW;
+S04;WW_FRI_E;Wasserwerk Friedrichshagen E-Galerie;;;;0.85;out;abstraction_WW;
+S04;WW_FRI_F;Wasserwerk Friedrichshagen F-Galerie;;;;0.81;out;abstraction_WW;
+S04;MgS_8.576;Zufluss_Spree_Fähre Rahnsdorf;;;;;in;inlet;
+S04;Fredersdorfer;Zufluss Fredersdorfer Fließ;;;;;in;inlet;
+S05;ageb1_310;Regenabfluss Müggelspree (einschließlich Großer Müggelsee und Erpe);;;;;in;rain_runoff;
+S06;Neuenhagener;Neuenhagener Mühlenfließ (Erpe) (NH-MF minus KW-MHF);;;;;in;inlet;mit Klärwerksabfluss Münchehofe - rausrechnen?
+S06;Q_KW_MHF;Einleitung Klärwerk Münchehofe;;;;;in;WWTP;
+S06;WW_FRI_A;Wasserwerk Friedrichshagen A-Galerie;;;;0.37;out;abstraction_WW;
+S07;ageb1_330;Stadtspree bis Abzweig Britzer Verbindungskanal;0.292;7208300;1319330;;in;rain_runoff;
+S07;WW_WUH_West;Wasserwerk Wuhlheide West-Galerie;;;;0.24;out;abstraction_WW;
+S08;Wuhle_baseflow;Zufluss_Wuhle;;;;;in;inlet;
+S08;ageb1_331;Regenabfluss Wuhle;0.241;19485692;2993312;;in;rain_runoff;
+S08;WW_KAU_Nord;Wasserwerk Kaulsdorf Nord-Galerie;;;;0;out;abstraction_WW;
+S08;WW_KAU_Sued;Wasserwerk Kaulsdorf Süd-Galerie;;;;0;out;abstraction_WW;
+S08;WW_WUH_Ost;Wasserwerk Wuhlheide Ost-Galerie;;;;0.60;out;abstraction_WW;
+S09;ageb1_340;Regenabfluss Stadtspree bis Abzweig Landwehrkanal;0.275;5741250;1005531;;in;rain_runoff;

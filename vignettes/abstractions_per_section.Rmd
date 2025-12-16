@@ -1,0 +1,176 @@
+---
+title: "Abstractions per Section"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Abstractions per Section}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Prepare Model
+
+```{r prepare_model}
+### Install R package from "dev" branch
+# remotes::install_github("kwb-r/kwb.BerlinWaterModel@dev")
+
+
+library(kwb.BerlinWaterModel)
+
+config <- kwb.BerlinWaterModel::config_read()
+
+config <- kwb.BerlinWaterModel::add_tracers(config)
+
+config <- kwb.BerlinWaterModel::add_substances(config)
+
+network <- kwb.BerlinWaterModel::prepare_network(config)
+
+temporal_resolution <- "days" # "hours" or "days"
+
+
+### scenario definition: reduction of inlet flows based on file config/scenarios.csv
+inflows <- kwb.BerlinWaterModel::inflows %>%
+  dplyr::left_join(config$scenarios %>%
+                     dplyr::select(flow_id, scaling_factor) %>%
+                     dplyr::rename(id = flow_id) %>%
+                     dplyr::mutate(scaling_factor = as.numeric(scaling_factor)),
+                   by = "id") %>%
+  dplyr::mutate(cbm_per_second = dplyr::if_else(!is.na(scaling_factor),
+                                                cbm_per_second * scaling_factor,
+                                                cbm_per_second)) %>%
+  dplyr::select(- scaling_factor)
+
+### Prepare input for "static" BF-shares
+input_list_bfs_static <- kwb.BerlinWaterModel::prepare_input(temporal_resolution = temporal_resolution,
+                                             config = config,
+                                             cso = cso,
+                                             inflows = inflows,
+                                             share_wwtp_sch_panke_1 = 0.1,
+                                             date_separation_panke_1_2 = "2015-06-30",
+                                             share_wwtp_sch_panke_2 = 0.9,
+                                             rain = rain,
+                                             ww = ww,
+                                             wwtp = wwtp,
+                                             bfshare_dynamic = FALSE,
+                                             date_min = "2002-01-01",
+                                             date_max = "2022-12-31")
+
+
+### Prepare input for "dynamic" BF-shares
+input_list_bfs_dynamic <- kwb.BerlinWaterModel::prepare_input(temporal_resolution = temporal_resolution,
+                                                        config = config,
+                                                        cso = cso,
+                                                        inflows = inflows,
+                                                        share_wwtp_sch_panke_1 = 0.1,
+                                                        date_separation_panke_1_2 = "2015-06-30",
+                                                        share_wwtp_sch_panke_2 = 0.9,
+                                                        rain = rain,
+                                                        ww = ww,
+                                                        wwtp = wwtp,
+                                                        bfshare_dynamic = TRUE,
+                                                        date_min = "2002-01-01",
+                                                        date_max = "2022-12-31")
+
+```
+
+## Run Model
+
+```{r run_model}
+
+### Run model for "static" BF-shares
+system.time(
+  flows_bfs_static <- kwb.BerlinWaterModel::calculate_flows_auto(config = config,
+                                                      input_list = input_list_bfs_static,
+                                                      network = network,
+                                                      use_dynamic = TRUE,
+                                                      debug = TRUE)
+)
+
+
+### Run model for "dynamic" BF-shares
+system.time(
+  flows_bfs_dynamic <- kwb.BerlinWaterModel::calculate_flows_auto(config = config,
+                                                                 input_list = input_list_bfs_dynamic,
+                                                                 network = network,
+                                                                 use_dynamic = TRUE,
+                                                                 debug = TRUE)
+)
+```
+
+## Plot Results
+
+
+```{r plot_results}
+
+prepare_plot <- function(flows, 
+                         combine_plots = FALSE, 
+                         scale_factor = 1, 
+                         landscape = TRUE,  
+                         width.cm = NULL, 
+                         height.cm = NULL,
+                         ...) {
+
+pdff <- sprintf("flows-and-bfshares-per-section_bfshare-%s_multiple-outflows-%s_%s_%s_scale-factor-%s.pdf",
+                ifelse(attr(flows, "bfshare_dynamic"), "dynamic-equations-new", "static"),
+                ifelse(attr(flows, "use_dynamic"), "dynamic", "static"),
+                min(flows$date),
+                max(flows$date),
+                stringr::str_replace(scale_factor, "\\.", "-"))
+
+kwb.utils::preparePdf(pdff, landscape = landscape, width.cm = width.cm, height.cm = height.cm)
+
+plots <- kwb.BerlinWaterModel::plot_flows_and_bfshares_per_section(config = config,
+                                                                flows = flows,
+                                                                network = network,
+                                                                ww = ww,
+                                                                scale_factor = scale_factor,
+                                                                debug = TRUE,
+                                                                ...)
+
+plots <- plots[!sapply(plots, is.null)]
+
+
+if (combine_plots) {
+    n_per_page <- 2
+    n_pages <- ceiling(length(plots) / n_per_page)
+    for (i in seq_len(n_pages)) {
+      gridExtra::grid.arrange(
+        grobs = plots[((i - 1) * n_per_page + 1):min(i * n_per_page, length(plots))],
+        ncol = 1, nrow = 2
+      )
+    }
+  } else {
+    # jeweils einzeln
+    print(plots)
+  }
+
+dev.off()
+#kwb.utils::finishAndShowPdf(pdff)
+
+pdff
+}
+
+if(TRUE) {
+scale_factors <- c(1,1.1,1.2)
+sapply(scale_factors, function(scale_factor) {
+  
+pdff_dynamic <- prepare_plot(flows = flows_bfs_dynamic,
+                             combine_plots = FALSE,
+                             scale_factor = scale_factor,
+                             landscape = TRUE)
+
+pdff_static <- prepare_plot(flows = flows_bfs_static, 
+                             combine_plots = FALSE, 
+                             scale_factor = scale_factor,
+                             landscape = TRUE)
+})
+}
+
+```
+
