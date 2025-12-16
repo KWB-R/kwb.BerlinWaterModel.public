@@ -31,6 +31,6 @@ remotes::install_github("KWB-R/kwb.BerlinWaterModel.public")
 
 ## Documentation
 
-Release: [https://kwb-r.github.io/kwb.berlinwatermodel.public](https://kwb-r.github.io/kwb.berlinwatermodel.public)
+Release: [https://kwb-r.github.io/kwb.BerlinWaterModel.public](https://kwb-r.github.io/kwb.BerlinWaterModel.public)
 
-Development: [https://kwb-r.github.io/kwb.berlinwatermodel.public/dev](https://kwb-r.github.io/kwb.berlinwatermodel.public/dev)
+Development: [https://kwb-r.github.io/kwb.BerlinWaterModel.public/dev](https://kwb-r.github.io/kwb.BerlinWaterModel.public/dev)
