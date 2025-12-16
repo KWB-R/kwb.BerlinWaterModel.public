@@ -22,7 +22,7 @@ S19;Spree 5;S17;S20;381963;;4;;
 S20;Spree 6;S19;H07;1490000;;4;;
 S21a;Rudower Teltowkanal 1;S03;S21;109000;;1;;
 S21;Rudower Teltowkanal 2;S21a;S22;514000;;1;Yes;
-S22;Teltowkanal 1;S21;S22a;2482000;;2;;
+S22;Teltowkanal 1;S21;S22a;2482000;;2;;Yes
 S22a;Teltowkanal 2;S22;S23;671000;;2;Yes;
 S23;Teltowkanal 3;S22a;MO_S23;1231000;;5;;
 H01;Nordgraben;S16;H03;9000;;3;;

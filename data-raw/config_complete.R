@@ -48,8 +48,8 @@ input_list <- kwb.BerlinWaterModel.public::prepare_input(temporal_resolution = t
                                                   ww = inputs$ww,
                                                   wwtp = inputs$wwtp,
                                                   bfshare_dynamic = FALSE,  # use TRUE for dynamic bank filtration share (depending on Q)
-                                                  date_min = "2016-01-01",
-                                                  date_max = "2016-12-31")
+                                                  date_min = "2002-01-01",
+                                                  date_max = "2022-12-31")
 
 ################################################################################################
 ### Calculate flows ############################################################################
