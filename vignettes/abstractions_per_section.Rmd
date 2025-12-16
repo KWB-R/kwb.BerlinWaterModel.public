@@ -21,21 +21,21 @@ knitr::opts_chunk$set(
 # remotes::install_github("kwb-r/kwb.BerlinWaterModel@dev")
 
 
-library(kwb.BerlinWaterModel)
+library(kwb.BerlinWaterModel.public)
 
-config <- kwb.BerlinWaterModel::config_read()
+config <- kwb.BerlinWaterModel.public::config_read()
 
-config <- kwb.BerlinWaterModel::add_tracers(config)
+config <- kwb.BerlinWaterModel.public::add_tracers(config)
 
-config <- kwb.BerlinWaterModel::add_substances(config)
+config <- kwb.BerlinWaterModel.public::add_substances(config)
 
-network <- kwb.BerlinWaterModel::prepare_network(config)
+network <- kwb.BerlinWaterModel.public::prepare_network(config)
 
 temporal_resolution <- "days" # "hours" or "days"
 
 
 ### scenario definition: reduction of inlet flows based on file config/scenarios.csv
-inflows <- kwb.BerlinWaterModel::inflows %>%
+inflows <- kwb.BerlinWaterModel.public::inflows %>%
   dplyr::left_join(config$scenarios %>%
                      dplyr::select(flow_id, scaling_factor) %>%
                      dplyr::rename(id = flow_id) %>%
@@ -47,7 +47,7 @@ inflows <- kwb.BerlinWaterModel::inflows %>%
   dplyr::select(- scaling_factor)
 
 ### Prepare input for "static" BF-shares
-input_list_bfs_static <- kwb.BerlinWaterModel::prepare_input(temporal_resolution = temporal_resolution,
+input_list_bfs_static <- kwb.BerlinWaterModel.public::prepare_input(temporal_resolution = temporal_resolution,
                                              config = config,
                                              cso = cso,
                                              inflows = inflows,
@@ -63,7 +63,7 @@ input_list_bfs_static <- kwb.BerlinWaterModel::prepare_input(temporal_resolution
 
 
 ### Prepare input for "dynamic" BF-shares
-input_list_bfs_dynamic <- kwb.BerlinWaterModel::prepare_input(temporal_resolution = temporal_resolution,
+input_list_bfs_dynamic <- kwb.BerlinWaterModel.public::prepare_input(temporal_resolution = temporal_resolution,
                                                         config = config,
                                                         cso = cso,
                                                         inflows = inflows,
@@ -85,7 +85,7 @@ input_list_bfs_dynamic <- kwb.BerlinWaterModel::prepare_input(temporal_resolutio
 
 ### Run model for "static" BF-shares
 system.time(
-  flows_bfs_static <- kwb.BerlinWaterModel::calculate_flows_auto(config = config,
+  flows_bfs_static <- kwb.BerlinWaterModel.public::calculate_flows_auto(config = config,
                                                       input_list = input_list_bfs_static,
                                                       network = network,
                                                       use_dynamic = TRUE,
@@ -95,7 +95,7 @@ system.time(
 
 ### Run model for "dynamic" BF-shares
 system.time(
-  flows_bfs_dynamic <- kwb.BerlinWaterModel::calculate_flows_auto(config = config,
+  flows_bfs_dynamic <- kwb.BerlinWaterModel.public::calculate_flows_auto(config = config,
                                                                  input_list = input_list_bfs_dynamic,
                                                                  network = network,
                                                                  use_dynamic = TRUE,
@@ -125,7 +125,7 @@ pdff <- sprintf("flows-and-bfshares-per-section_bfshare-%s_multiple-outflows-%s_
 
 kwb.utils::preparePdf(pdff, landscape = landscape, width.cm = width.cm, height.cm = height.cm)
 
-plots <- kwb.BerlinWaterModel::plot_flows_and_bfshares_per_section(config = config,
+plots <- kwb.BerlinWaterModel.public::plot_flows_and_bfshares_per_section(config = config,
                                                                 flows = flows,
                                                                 network = network,
                                                                 ww = ww,

@@ -7,13 +7,13 @@
 prepare_input(
   temporal_resolution = "days",
   config = config_read(),
-  cso = kwb.BerlinWaterModel::cso,
-  inflows = kwb.BerlinWaterModel::inflows,
-  rain = kwb.BerlinWaterModel::rain,
-  evapo_p = kwb.BerlinWaterModel::evapo_p,
-  shares_timeseries = kwb.BerlinWaterModel::shares_timeseries,
-  ww = kwb.BerlinWaterModel::ww,
-  wwtp = kwb.BerlinWaterModel::wwtp,
+  cso = kwb.BerlinWaterModel.public::cso,
+  inflows = kwb.BerlinWaterModel.public::inflows,
+  rain = kwb.BerlinWaterModel.public::rain,
+  evapo_p = kwb.BerlinWaterModel.public::evapo_p,
+  shares_timeseries = kwb.BerlinWaterModel.public::shares_timeseries,
+  ww = kwb.BerlinWaterModel.public::ww,
+  wwtp = kwb.BerlinWaterModel.public::wwtp,
   bfshare_dynamic = FALSE,
   share_wwtp_sch_to_nordgraben_timeseries = TRUE,
   share_wwtp_sch_panke_1 = 0.1,
@@ -34,19 +34,19 @@ prepare_input(
 
 \item{config}{model network configuration (as retrieved by \code{\link{config_read}})}
 
-\item{cso}{cso dataset (default: kwb.BerlinWaterModel::cso)}
+\item{cso}{cso dataset (default: kwb.BerlinWaterModel.public::cso)}
 
-\item{inflows}{inflows dataset (default: kwb.BerlinWaterModel::inflows)}
+\item{inflows}{inflows dataset (default: kwb.BerlinWaterModel.public::inflows)}
 
-\item{rain}{rain dataset (default: kwb.BerlinWaterModel::rain)}
+\item{rain}{rain dataset (default: kwb.BerlinWaterModel.public::rain)}
 
-\item{evapo_p}{evaporation dataset (default: kwb.BerlinWaterModel::evapo_p)}
+\item{evapo_p}{evaporation dataset (default: kwb.BerlinWaterModel.public::evapo_p)}
 
-\item{shares_timeseries}{shares timeseries dataset (default: kwb.BerlinWaterModel::shares_timeseries)}
+\item{shares_timeseries}{shares timeseries dataset (default: kwb.BerlinWaterModel.public::shares_timeseries)}
 
-\item{ww}{waterworks dataset (default: kwb.BerlinWaterModel::ww)}
+\item{ww}{waterworks dataset (default: kwb.BerlinWaterModel.public::ww)}
 
-\item{wwtp}{wastewater treatment plant dataset (default: kwb.BerlinWaterModel::wwtp)}
+\item{wwtp}{wastewater treatment plant dataset (default: kwb.BerlinWaterModel.public::wwtp)}
 
 \item{bfshare_dynamic}{should dynamic bankfiltration shares be used or the static
 ones contained in column "bank_filtration_share" of config$flows_in_out}

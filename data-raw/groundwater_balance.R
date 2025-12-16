@@ -1,6 +1,6 @@
 if(FALSE) {
 
-config <- kwb.BerlinWaterModel::config_read(config_dir = "inst/extdata/config/network_complete")
+config <- kwb.BerlinWaterModel.public::config_read(config_dir = "inst/extdata/config/network_complete")
 
 col_datetime <- "date"
 col_datetime_join <- ifelse(temporal_resolution != "days", "datetime", col_datetime)
@@ -8,7 +8,7 @@ bfshare_dynamic <- FALSE
 temporal_resolution <- "days"
 
 bfstypes_equations <- config$bfstypes_equations %>%
-  kwb.BerlinWaterModel::bfs_convert_equation()
+  kwb.BerlinWaterModel.public::bfs_convert_equation()
 
 bfstypes_wellgalleries <- config$bfstypes_wellgalleries %>%
   dplyr::filter(!is.na(type)) %>%
@@ -24,10 +24,10 @@ bfstypes_wellgalleries <- config$bfstypes_wellgalleries %>%
 
 ww_bfshare <- config$flows_in_out %>%
   dplyr::filter(stringr::str_starts(flow_id, "WW")) %>%
-  kwb.BerlinWaterModel::shorten_ww_flow_id() %>%
+  kwb.BerlinWaterModel.public::shorten_ww_flow_id() %>%
   dplyr::select(flow_id, bank_filtration_share) %>%
   dplyr::rename(bank_filtration_share_static = bank_filtration_share) %>%
-  dplyr::left_join(kwb.BerlinWaterModel::ww, by = c("flow_id" = "id")) %>%
+  dplyr::left_join(kwb.BerlinWaterModel.public::ww, by = c("flow_id" = "id")) %>%
   dplyr::filter(!is.na(cbm_per_second)) %>%
   dplyr::left_join(bfstypes_wellgalleries) %>%
   dplyr::mutate(cbm_per_day = cbm_per_second * 24 * 3600,

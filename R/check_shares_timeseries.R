@@ -1,6 +1,6 @@
 #' Check Shares of Multiple Outflow Time Series
 #'
-#' @param shares_timeseries shares timeseries dataset (default: kwb.BerlinWaterModel::shares_timeseries)
+#' @param shares_timeseries shares timeseries dataset (default: kwb.BerlinWaterModel.public::shares_timeseries)
 #' @param config model network configuration (as retrieved by \code{\link{config_read}})
 #' @param debug print debug messages (default: TRUE)
 #'
@@ -8,9 +8,9 @@
 #' @export
 #'
 #' @examples
-#'  config <- kwb.BerlinWaterModel::config_read()
+#'  config <- kwb.BerlinWaterModel.public::config_read()
 #'  check_shares_timeseries(
-#'  shares_timeseries = kwb.BerlinWaterModel::shares_timeseries,
+#'  shares_timeseries = kwb.BerlinWaterModel.public::shares_timeseries,
 #'  config = config
 #'  )
 #' @importFrom tidyr pivot_wider

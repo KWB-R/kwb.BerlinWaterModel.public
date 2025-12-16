@@ -11,13 +11,13 @@
 #' @export
 #'
 #' @examples
-#' \dontrun{config <- kwb.BerlinWaterModel::config_read()
+#' \dontrun{config <- kwb.BerlinWaterModel.public::config_read()
 #' config}
 #' @importFrom stats setNames
 #' @importFrom readr read_csv2 locale
 #' @importFrom stringr str_remove
 config_read <- function(config_dir = system.file("extdata/config/network_complete",
-                                                 package = "kwb.BerlinWaterModel"),
+                                                 package = "kwb.BerlinWaterModel.public"),
                         file_encoding = "UTF-8") {
 
   files <- list.files(config_dir, full.names = TRUE)

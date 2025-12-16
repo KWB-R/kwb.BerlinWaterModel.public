@@ -1,4 +1,4 @@
-config <- kwb.BerlinWaterModel::config_read(config_dir = "inst/extdata/config/network_complete")
+config <- kwb.BerlinWaterModel.public::config_read(config_dir = "inst/extdata/config/network_complete")
 
 datetime_min <- lubridate::as_datetime("2018-01-01 00:00:00", tz = "UTC")
 datetime_max <- lubridate::as_datetime("2018-12-31 23:59:59", tz = "UTC")

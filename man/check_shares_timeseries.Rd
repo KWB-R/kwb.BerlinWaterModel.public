@@ -7,7 +7,7 @@
 check_shares_timeseries(shares_timeseries, config, debug = TRUE)
 }
 \arguments{
-\item{shares_timeseries}{shares timeseries dataset (default: kwb.BerlinWaterModel::shares_timeseries)}
+\item{shares_timeseries}{shares timeseries dataset (default: kwb.BerlinWaterModel.public::shares_timeseries)}
 
 \item{config}{model network configuration (as retrieved by \code{\link{config_read}})}
 
@@ -20,9 +20,9 @@ prints debug messages or stop in case of errors
 Check Shares of Multiple Outflow Time Series
 }
 \examples{
- config <- kwb.BerlinWaterModel::config_read()
+ config <- kwb.BerlinWaterModel.public::config_read()
  check_shares_timeseries(
- shares_timeseries = kwb.BerlinWaterModel::shares_timeseries,
+ shares_timeseries = kwb.BerlinWaterModel.public::shares_timeseries,
  config = config
  )
 }

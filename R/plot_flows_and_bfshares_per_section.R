@@ -4,7 +4,7 @@
 #' @param flows flows as retrieved by xxxx
 #' @param network tibble with water cycle flow network data, as retrieved by
 #' \code{{\link{prepare_network}}}
-#' @param ww waterworks dataset (default: kwb.BerlinWaterModel::ww)
+#' @param ww waterworks dataset (default: kwb.BerlinWaterModel.public::ww)
 #' @param scale_factor scale factor for increasing size of labels
 #' @param debug print debug messages (default: TRUE)
 #' @param add_caption_simulation add caption with simulation information (default: FALSE)
@@ -435,7 +435,7 @@ stats_bf_mar_caption <- if(nrow(stats_bf) > 0 & nrow(stats_mar) == 0) {
       label_spacing <- -0.25  # sinnvoller fixer Abstand
 
 
-      caption_simulation <- sprintf("Flows simulated with an '%s' temporal resolution for time period (%s - %s) with R package kwb.BerlinWaterModelBerlin (https://github.com/kwb-r/kwb.BerlinWaterModel/dev/).",
+      caption_simulation <- sprintf("Flows simulated with an '%s' temporal resolution for time period (%s - %s) with R package kwb.BerlinWaterModelBerlin.public (https://github.com/kwb-r/kwb.BerlinWaterModel.public/).",
                                     dplyr::if_else(temporal_resolution == "days", "daily", "hourly"),
                                     min(tmp$date),
                                     max(tmp$date))
@@ -497,7 +497,7 @@ stats_bf_mar_caption <- if(nrow(stats_bf) > 0 & nrow(stats_mar) == 0) {
                       #subtitle =  subtitle,
                       caption = sprintf("%s%s%s%s%s\n%s",
                                         dplyr::if_else(add_caption_simulation, caption_simulation, ""),
-                                        dplyr::if_else(add_caption_weblink, "\nThe workflow for this plot is reproducible and available at: https://kwb-r.github.io/kwb.BerlinWaterModel/articles/abstractions_per_section.html", ""),
+                                        dplyr::if_else(add_caption_weblink, "\nThe workflow for this plot is reproducible and available at: https://kwb-r.github.io/kwb.BerlinWaterModel.public/articles/abstractions_per_section.html", ""),
                                         dplyr::if_else(add_caption_outflowsmultiple, caption_outflowsmultiple, ""),
                                         dplyr::if_else(bfshare_dynamic & any(!is.na(stats_bf$equation_text)), "\nDynamic bank filtration shares are based on well gallery abstraction rates (and function parameters 'equation_a|b' of configuration file 'bfstypes_equations.csv')", ""),
                                         dplyr::if_else((bfshare_dynamic & any(is.na(stats_bf$equation_text))) | !bfshare_dynamic, "\nStatic bank filtration shares (constant values defined in column 'bank_filtration_share' of configuration file 'flows_in_out.csv')", ""),

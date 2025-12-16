@@ -6,7 +6,7 @@
 \usage{
 get_bfshares(
   config,
-  ww = kwb.BerlinWaterModel::ww,
+  ww = kwb.BerlinWaterModel.public::ww,
   temporal_resolution = "days",
   bfshare_dynamic = TRUE
 )
@@ -14,7 +14,7 @@ get_bfshares(
 \arguments{
 \item{config}{model network configuration (as retrieved by \code{\link{config_read}})}
 
-\item{ww}{waterworks dataset (default: kwb.BerlinWaterModel::ww)}
+\item{ww}{waterworks dataset (default: kwb.BerlinWaterModel.public::ww)}
 
 \item{temporal_resolution}{specify temporal resolution of model input dataset.
 (default: "days"). Valid options are: "days" or "hours"}

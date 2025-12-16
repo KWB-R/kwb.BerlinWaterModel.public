@@ -1,22 +1,22 @@
-#remotes::install_github("kwb-r/kwb.BerlinWaterModel@70c9e79f7f492163acd4b5e6784bae77286eaf18")
-library(kwb.BerlinWaterModel)
+#remotes::install_github("kwb-r/kwb.BerlinWaterModel.public")
+library(kwb.BerlinWaterModel.public)
 
 # read config files ##########################################################
 
-#config <- kwb.BerlinWaterModel::config_read(config_dir = "inst/extdata/config/network_complete")
-config <- kwb.BerlinWaterModel::config_read(config_dir = "inst/extdata/config/network_complete_mean-start-conc")
-#config <- kwb.BerlinWaterModel::config_read(config_dir = "inst/extdata/config/network_complete_2019")
+#config <- kwb.BerlinWaterModel.public::config_read(config_dir = "inst/extdata/config/network_complete")
+config <- kwb.BerlinWaterModel.public::config_read(config_dir = "inst/extdata/config/network_complete_mean-start-conc")
+#config <- kwb.BerlinWaterModel.public::config_read(config_dir = "inst/extdata/config/network_complete_2019")
 
-config <- kwb.BerlinWaterModel::add_rain_direct_and_evaporation(config)
+config <- kwb.BerlinWaterModel.public::add_rain_direct_and_evaporation(config)
 
-config <- kwb.BerlinWaterModel::add_tracers(config)
+config <- kwb.BerlinWaterModel.public::add_tracers(config)
 
-config <- kwb.BerlinWaterModel::add_substances(config)
+config <- kwb.BerlinWaterModel.public::add_substances(config)
 
-network <- kwb.BerlinWaterModel::prepare_network(config)
+network <- kwb.BerlinWaterModel.public::prepare_network(config)
 
 
-#kwb.BerlinWaterModel::check_network_errors(network)
+#kwb.BerlinWaterModel.public::check_network_errors(network)
 
 # adaptation of inflow concentrations
 # Havel
@@ -38,7 +38,7 @@ config$flows_in_out$conc_ValsartansaeureAeq.mg.m3[config$flows_in_out$flow_id ==
 #plot_network_simple(network)
 
 ### Network graph: complex
-#net_complex <- kwb.BerlinWaterModel::plot_network_complex(network,
+#net_complex <- kwb.BerlinWaterModel.public::plot_network_complex(network,
 #                                                        config,
 #                                                        show_labels = TRUE)
 
@@ -54,12 +54,12 @@ col_date_or_datetime <- ifelse(temporal_resolution == "hours",
                                "datetime",
                                "date")
 
-inputs <- kwb.BerlinWaterModel::add_scenario(
+inputs <- kwb.BerlinWaterModel.public::add_scenario(
   config = config,
   use_scenario = FALSE, # should scaling factors be used (in config$scenarios) or not?
   debug = TRUE)
 
-input_list <- kwb.BerlinWaterModel::prepare_input(temporal_resolution = temporal_resolution,
+input_list <- kwb.BerlinWaterModel.public::prepare_input(temporal_resolution = temporal_resolution,
                                                   config = config,
                                                   cso = inputs$cso,
                                                   inflows = inputs$inflows,
@@ -88,7 +88,7 @@ if(FALSE) {
 }
 
 # input with dynamic bank filtration share (depending on Q) ####################################
-input_list_bfdynamic <- kwb.BerlinWaterModel::prepare_input(temporal_resolution = temporal_resolution,
+input_list_bfdynamic <- kwb.BerlinWaterModel.public::prepare_input(temporal_resolution = temporal_resolution,
                                                             config = config,
                                                             cso = cso,
                                                             inflows = inflows,
@@ -110,7 +110,7 @@ input_list_bfdynamic <- kwb.BerlinWaterModel::prepare_input(temporal_resolution 
 ################################################################################################
 
 system.time(
-flows_static <- kwb.BerlinWaterModel::calculate_flows_auto(config = config,
+flows_static <- kwb.BerlinWaterModel.public::calculate_flows_auto(config = config,
                                                            input_list = input_list,
                                                            network = network,
                                                            use_dynamic = FALSE,
@@ -119,16 +119,16 @@ flows_static <- kwb.BerlinWaterModel::calculate_flows_auto(config = config,
 
 # calculate flows using functions in outflows_multiple.csv for river branching
 system.time(
-  flows_dynamic <- kwb.BerlinWaterModel::calculate_flows_auto(config = config,
+  flows_dynamic <- kwb.BerlinWaterModel.public::calculate_flows_auto(config = config,
                                                               input_list = input_list,
                                                               network = network,
                                                               use_dynamic = TRUE,
                                                               debug = TRUE)
 )
 
-flows_stats <- kwb.BerlinWaterModel::calculate_flow_stats(flows = flows_dynamic)
+flows_stats <- kwb.BerlinWaterModel.public::calculate_flow_stats(flows = flows_dynamic)
 
-flows_dynamic_neg_flows_stat <- kwb.BerlinWaterModel::get_reverse_flows_per_section(flows = flows_dynamic)
+flows_dynamic_neg_flows_stat <- kwb.BerlinWaterModel.public::get_reverse_flows_per_section(flows = flows_dynamic)
 #openxlsx::write.xlsx(x = flows_neg_stat_evap_30, file = "flows_neg_stat_evap30_2019.xlsx")
 
 # Wenn Durchfluss im Tegeler negativ, dann Ausgleich von Oberhavel (über Seeleitung) #########################
@@ -138,7 +138,7 @@ if(FALSE) {
   input_fixtegel$Seeleitung_out[flows$H03 < 0] <- input$Seeleitung_out[flows$H03 < 0] + flows$H03[flows$H03 < 0]
 
   system.time(
-    flows <- kwb.BerlinWaterModel::calculate_flows_auto(config = config,
+    flows <- kwb.BerlinWaterModel.public::calculate_flows_auto(config = config,
                                                         input = input_fixtegel,
                                                         network = network,
                                                         debug = TRUE))
@@ -154,7 +154,7 @@ openxlsx::write.xlsx(x = flows_dynamic, file = "flows_days_2019_start-con-2019.x
 ################################################################################################
 
 system.time(
-  qualities_00_dynamic_forward <- kwb.BerlinWaterModel::calculate_qualities(input_list = input_list,
+  qualities_00_dynamic_forward <- kwb.BerlinWaterModel.public::calculate_qualities(input_list = input_list,
                                                                     flows = flows_dynamic,
                                                                     network = network,
                                                                     config = config,
@@ -163,7 +163,7 @@ system.time(
 )
 
 system.time(
-  qualities_00_dynamic_reverse <- kwb.BerlinWaterModel::calculate_qualities(input_list = input_list,
+  qualities_00_dynamic_reverse <- kwb.BerlinWaterModel.public::calculate_qualities(input_list = input_list,
                                                                     flows = flows_dynamic,
                                                                     network = network,
                                                                     config = config,
@@ -179,11 +179,11 @@ openxlsx::write.xlsx(x = qualities_00_dynamic_reverse$conc, file = "qualities_ho
 # qualities_00_dynamic_reverse <- readRDS(file = "qualities_2002-2022_Val5.5_Cbz.Rds")
 
 # Save result of latest time point in sections.csv
-config_01 <- kwb.BerlinWaterModel::set_tracer_starting_conc(config, qualities_00_dynamic_reverse)
+config_01 <- kwb.BerlinWaterModel.public::set_tracer_starting_conc(config, qualities_00_dynamic_reverse)
 readr::write_csv2(config_01$sections, "inst/extdata/config/network_complete_2019/sections.csv")
 
 # Adapt start concentrations for all sections to mean of "qualities_00_dynamic_reverse" (after section has tracer_sum > 99.9 percent)
-config_01_dynamic_reverse <- kwb.BerlinWaterModel::set_tracer_starting_conc_stats(config = config,
+config_01_dynamic_reverse <- kwb.BerlinWaterModel.public::set_tracer_starting_conc_stats(config = config,
                                                                                   qualities = qualities_00_dynamic_reverse,
                                                                                   aggregation_function = mean,
                                                                                   minimum_tracer_sum = 0.999)
@@ -205,7 +205,7 @@ flows_dynamic <- readRDS(file = "flows_hours_2002-2022.Rds")
 
 if(FALSE) {
 
-  qsimVis_input <- kwb.BerlinWaterModel::prepare_qsimVis_input(
+  qsimVis_input <- kwb.BerlinWaterModel.public::prepare_qsimVis_input(
     config = config,
     flows = flows_dynamic,
     qualities = qualities_00_dynamic_reverse) %>%
@@ -304,10 +304,10 @@ if(FALSE) {
 #### Comparison: BF shares static vs dynamic for each well gallery ##########################
 
 flow_ids <- config$flows_in_out %>%
-  kwb.BerlinWaterModel::shorten_ww_flow_id() %>%
+  kwb.BerlinWaterModel.public::shorten_ww_flow_id() %>%
   dplyr::pull(flow_id)
 
-ww_bfshare <- kwb.BerlinWaterModel::get_bfshares(config = config,
+ww_bfshare <- kwb.BerlinWaterModel.public::get_bfshares(config = config,
                                                  ww = ww,
                                                  temporal_resolution = temporal_resolution,
                                                  bfshare_dynamic = bfshare_dynamic)

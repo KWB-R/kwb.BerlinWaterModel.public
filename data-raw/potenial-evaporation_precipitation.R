@@ -82,7 +82,7 @@ evapo_p_df <- if(temporal_resolution == "days") {
   evapo_p_cbm_per_second
 } else {
   evapo_p_cbm_per_second %>%
-    kwb.BerlinWaterModel::fill_timeseries(temporal_resolution = "hours",
+    kwb.BerlinWaterModel.public::fill_timeseries(temporal_resolution = "hours",
                                           direction = "down")
 }
 

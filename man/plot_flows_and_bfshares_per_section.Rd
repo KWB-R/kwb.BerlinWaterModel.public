@@ -24,7 +24,7 @@ plot_flows_and_bfshares_per_section(
 \item{network}{tibble with water cycle flow network data, as retrieved by
 \code{{\link{prepare_network}}}}
 
-\item{ww}{waterworks dataset (default: kwb.BerlinWaterModel::ww)}
+\item{ww}{waterworks dataset (default: kwb.BerlinWaterModel.public::ww)}
 
 \item{scale_factor}{scale factor for increasing size of labels}
 

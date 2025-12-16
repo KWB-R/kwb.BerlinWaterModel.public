@@ -36,7 +36,7 @@ tracer_colors <- c(
 qualities <- qualities_00_dynamic_reverse
 
 # aggregate results to monthly averages
-qualities <- kwb.BerlinWaterModel::aggregate_qualities_monthly(qualities_00_dynamic_reverse)
+qualities <- kwb.BerlinWaterModel.public::aggregate_qualities_monthly(qualities_00_dynamic_reverse)
 
 dat <- qualities$conc %>%
   dplyr::bind_rows(.id = "section_id") %>%
@@ -125,7 +125,7 @@ substance_colors <- c(
 qualities <- qualities_00_dynamic_reverse
 
 # aggregate results to monthly averages
-qualities <- kwb.BerlinWaterModel::aggregate_qualities_monthly(qualities_00_dynamic_reverse)
+qualities <- kwb.BerlinWaterModel.public::aggregate_qualities_monthly(qualities_00_dynamic_reverse)
 
 dat <- qualities$conc %>%
   dplyr::bind_rows(.id = "section_id") %>%
@@ -238,12 +238,12 @@ kwb.utils::finishAndShowPdf(pdff)
 # Plot flows ###################################################################################
 ################################################################################################
 flows <- flows_dynamic
-#flows <- kwb.BerlinWaterModel::aggregate_flows_monthly(flows_dynamic)
+#flows <- kwb.BerlinWaterModel.public::aggregate_flows_monthly(flows_dynamic)
 
 flows_df_long <- flows %>%
   tidyr::pivot_longer(cols = !tidyselect::starts_with(col_date_or_datetime),
                       names_to = "section_id", values_to = "cbm_per_second") %>%
-  dplyr::left_join(kwb.BerlinWaterModel::get_section_idnames(config) %>%
+  dplyr::left_join(kwb.BerlinWaterModel.public::get_section_idnames(config) %>%
                      dplyr::rename(section_id = id,
                                    section_name = name),
                    by = "section_id") %>%
@@ -596,7 +596,7 @@ qualities_00 <- qualities_00_static
 
 flow_positive_0.000001 <- dplyr::if_else(flows[[section_id]] < 0,  0.000001, flows[[section_id]])
 
-conc_flow_positive_0.000001 <- kwb.BerlinWaterModel::calc_conc(c_in = 1,
+conc_flow_positive_0.000001 <- kwb.BerlinWaterModel.public::calc_conc(c_in = 1,
                                                                c_0 = 0,
                                                                Q = flow_positive_0.000001,
                                                                V = 30000000,
@@ -611,7 +611,7 @@ plot(seq_len(nrow(flows))/365,
      xlab = "Years",
      ylab = "Tracer share (%)",
      main = sprintf("%s (%s): with positive flow >= 0.000001  m3/s (median: %.3f m3/s, 90%%: %.2f years, 95%%: %.2f years)",
-                    kwb.BerlinWaterModel::get_names_from_ids(section_id, config),
+                    kwb.BerlinWaterModel.public::get_names_from_ids(section_id, config),
                     section_id,
                     median(flow_positive_0.000001),
                     which(conc_flow_positive_0.000001 > 0.90)[1]/365,

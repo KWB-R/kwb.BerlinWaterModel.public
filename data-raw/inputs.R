@@ -1,4 +1,4 @@
-config <- kwb.BerlinWaterModel::config_read(config_dir = "inst/extdata/config/network_complete")
+config <- kwb.BerlinWaterModel.public::config_read(config_dir = "inst/extdata/config/network_complete")
 
 ################################################################################################
 # CSO data #####################################################################################
