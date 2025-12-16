@@ -63,7 +63,7 @@ prints debug messages or stop in case of errors
 #> ── Column specification ────────────────────────────────────────────────────────
 #> Delimiter: ";"
 #> chr (2): flow_type, id_base
-#> dbl (1): conc_Valsartan.ug.L
+#> dbl (1): conc_Fluoranthen.ug.L
 #> 
 #> ℹ Use `spec()` to retrieve the full column specification for this data.
 #> ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.
