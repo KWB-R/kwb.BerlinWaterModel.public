@@ -6,6 +6,6 @@
 #' \describe{
 #'   \item{date}{date}
 #'   \item{id}{id of inflow station}
-#'   \item{cbm_per_second}{measured flow in cubicmeter per second}
+#'   \item{cbm_per_second}{daily average flow in cubicmeter per second}
 #' }
 "inflows"

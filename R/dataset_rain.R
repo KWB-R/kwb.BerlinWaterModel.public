@@ -5,7 +5,7 @@
 #' @format A tibble with 247,076 rows and two columns
 #' \describe{
 #'   \item{datetime}{datetime}
-#'   \item{DWD_0433}{rainfall in mm for DWD rainstation 0433}
+#'   \item{DWD_0433}{hourly rainfall in mm for DWD rainstation 0433}
 
 #' }
 "rain"
