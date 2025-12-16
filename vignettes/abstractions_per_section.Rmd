@@ -21,7 +21,7 @@ knitr::opts_chunk$set(
 # remotes::install_github("kwb-r/kwb.BerlinWaterModel@dev")
 
 
-library(kwb.BerlinWaterModel)
+library(kwb.BerlinWaterModel.public)
 
 config <- kwb.BerlinWaterModel.public::config_read()
 

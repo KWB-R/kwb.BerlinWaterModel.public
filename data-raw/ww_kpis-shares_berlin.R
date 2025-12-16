@@ -1,4 +1,4 @@
-library(kwb.BerlinWaterModel)
+library(kwb.BerlinWaterModel.public)
 
 # read config files ##########################################################
 
