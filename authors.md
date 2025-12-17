@@ -14,7 +14,7 @@
   IMPETUS](https://climate-impetus.eu/wp-content/uploads/2021/12/horizontal.png)](https://www.kompetenz-wasser.de/en/forschung/projekte/impetus)**.
   Funder.
 
-- **[![KWB](https://publications.kompetenz-wasser.de/img/KWB-Logo.svg)](http://www.kompetenz-wasser.de)**.
+- **[![KWB](https://logos.kompetenz-wasser.io/KWB_Logo_M_Blau_RGB.svg)](https://www.kompetenz-wasser.de)**.
   Copyright holder.
 
 ## Citation

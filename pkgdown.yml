@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   abstractions_per_section: abstractions_per_section.html
   tutorial: tutorial.html
-last_built: 2025-12-16T17:34Z
+last_built: 2025-12-17T08:52Z
 urls:
   reference: https://kwb-r.github.io/kwb.BerlinWaterModel.public/reference
   article: https://kwb-r.github.io/kwb.BerlinWaterModel.public/articles
