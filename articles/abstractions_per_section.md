@@ -193,68 +193,68 @@ system.time(
                                                       use_dynamic = TRUE,
                                                       debug = TRUE)
 )
-#> Calculating flow for section 'Müggelsee' ... ok. (0.08 secs) 
+#> Calculating flow for section 'Müggelsee' ... ok. (0.09 secs) 
 #> Calculating flow for section 'Seddinsee und Gosener Kanal' ... ok. (0.09 secs) 
 #> Calculating flow for section 'Erpe (NH-MF)' ... ok. (0.09 secs) 
 #> Calculating flow for section 'Langer See (Dahme)' ... ok. (0.09 secs) 
 #> Calculating flow for section 'Müggelspree 2' ... ok. (0.09 secs) 
 #> Calculating flow for section 'Dahme' ... ok. (0.09 secs) 
 #> Calculating flow for section 'MHG-Graben' ... ok. (0.09 secs) 
-#> Calculating flow for section 'Müggelspree' ... ok. (0.08 secs) 
-#> Calculating flow for section 'Wuhle' ... ok. (0.08 secs) 
+#> Calculating flow for section 'Müggelspree' ... ok. (0.10 secs) 
+#> Calculating flow for section 'Wuhle' ... ok. (0.09 secs) 
 #> Calculating flow for section 'Rummelsburger See' ... ok. (0.09 secs) 
 #> Calculating flow for section 'Spree 1' ...
 #> use dynamic & function for flow from section 'Dahme' to 'Spree 1'
-#> ok. (0.11 secs) 
+#> ok. (0.12 secs) 
 #> Calculating flow for section 'Britzer Verbindungskanal' ...
 #> use dynamic & function for flow from section 'Spree 1' to 'Britzer Verbindungskanal'
 #> ok. (0.12 secs) 
 #> Calculating flow for section 'Rudower Teltowkanal 1' ...
 #> use dynamic & function for flow from section 'Dahme' to 'Rudower Teltowkanal 1'
-#> ok. (0.11 secs) 
+#> ok. (0.13 secs) 
 #> Calculating flow for section 'Spree 2' ...
 #> use dynamic & function for flow from section 'Spree 1' to 'Spree 2'
-#> ok. (0.12 secs) 
+#> ok. (0.14 secs) 
 #> Calculating flow for section 'Neuköllner SF-Kanal' ...
 #> use dynamic & function for flow from section 'Britzer Verbindungskanal' to 'Neuköllner SF-Kanal'
-#> ok. (0.12 secs) 
+#> ok. (0.13 secs) 
 #> Calculating flow for section 'Panke' ... ok. (0.09 secs) 
 #> Calculating flow for section 'Rudower Teltowkanal 2' ... ok. (0.09 secs) 
 #> Calculating flow for section 'Spree 3' ...
 #> use dynamic & static value for flow from section 'Spree 2' to 'Spree 3'
-#> ok. (0.11 secs) 
+#> ok. (0.12 secs) 
 #> Calculating flow for section 'BSS-Kanal' ...
 #> use dynamic & function for flow from section 'Spree 3' to 'BSS-Kanal'
 #> use dynamic & time series for flow from section 'Panke' to 'BSS-Kanal'
-#> ok. (0.15 secs) 
+#> ok. (0.16 secs) 
 #> Calculating flow for section 'Landwehrkanal' ...
 #> use dynamic & static value for flow from section 'Spree 2' to 'Landwehrkanal'
-#> ok. (0.11 secs) 
+#> ok. (0.12 secs) 
 #> Calculating flow for section 'Nordgraben' ...
 #> use dynamic & time series for flow from section 'Panke' to 'Nordgraben'
 #> ok. (0.11 secs) 
-#> Calculating flow for section 'Oberhavel 1' ... ok. (0.08 secs) 
+#> Calculating flow for section 'Oberhavel 1' ... ok. (0.09 secs) 
 #> Calculating flow for section 'Spree 4' ...
 #> use dynamic & function for flow from section 'Spree 3' to 'Spree 4'
 #> ok. (0.25 secs) 
 #> Calculating flow for section 'Tegeler Fließ' ... ok. (0.08 secs) 
 #> Calculating flow for section 'Teltowkanal 1' ...
 #> use dynamic & function for flow from section 'Britzer Verbindungskanal' to 'Teltowkanal 1'
-#> ok. (0.11 secs) 
-#> Calculating flow for section 'Oberhavel 2' ... ok. (0.08 secs) 
-#> Calculating flow for section 'Spree 5' ... ok. (0.08 secs) 
+#> ok. (0.12 secs) 
+#> Calculating flow for section 'Oberhavel 2' ... ok. (0.09 secs) 
+#> Calculating flow for section 'Spree 5' ... ok. (0.09 secs) 
 #> Calculating flow for section 'Tegeler See' ... ok. (0.09 secs) 
-#> Calculating flow for section 'Teltowkanal 2' ... ok. (0.08 secs) 
+#> Calculating flow for section 'Teltowkanal 2' ... ok. (0.09 secs) 
 #> Calculating flow for section 'Oberhavel 3' ... ok. (0.09 secs) 
-#> Calculating flow for section 'Spree 6' ... ok. (0.08 secs) 
-#> Calculating flow for section 'Teltowkanal 3' ... ok. (0.08 secs) 
-#> Calculating flow for section 'Unterhavel 1' ... ok. (0.08 secs) 
+#> Calculating flow for section 'Spree 6' ... ok. (0.09 secs) 
+#> Calculating flow for section 'Teltowkanal 3' ... ok. (0.09 secs) 
+#> Calculating flow for section 'Unterhavel 1' ... ok. (0.09 secs) 
 #> Calculating flow for section 'Wannsee' ...
 #> use dynamic & function for flow from section 'Teltowkanal 3' to 'Wannsee'
-#> ok. (0.11 secs) 
+#> ok. (0.12 secs) 
 #> Calculating flow for section 'Unterhavel 2' ... ok. (0.09 secs)
 #>    user  system elapsed 
-#>    5.99    0.12    6.13
+#>    6.17    0.12    6.36
 
 
 ### Run model for "dynamic" BF-shares
@@ -274,7 +274,7 @@ system.time(
 #> Calculating flow for section 'MHG-Graben' ... ok. (0.09 secs) 
 #> Calculating flow for section 'Müggelspree' ... ok. (0.09 secs) 
 #> Calculating flow for section 'Wuhle' ... ok. (0.09 secs) 
-#> Calculating flow for section 'Rummelsburger See' ... ok. (0.08 secs) 
+#> Calculating flow for section 'Rummelsburger See' ... ok. (0.09 secs) 
 #> Calculating flow for section 'Spree 1' ...
 #> use dynamic & function for flow from section 'Dahme' to 'Spree 1'
 #> ok. (0.11 secs) 
@@ -283,33 +283,33 @@ system.time(
 #> ok. (0.12 secs) 
 #> Calculating flow for section 'Rudower Teltowkanal 1' ...
 #> use dynamic & function for flow from section 'Dahme' to 'Rudower Teltowkanal 1'
-#> ok. (0.11 secs) 
+#> ok. (0.12 secs) 
 #> Calculating flow for section 'Spree 2' ...
 #> use dynamic & function for flow from section 'Spree 1' to 'Spree 2'
 #> ok. (0.12 secs) 
 #> Calculating flow for section 'Neuköllner SF-Kanal' ...
 #> use dynamic & function for flow from section 'Britzer Verbindungskanal' to 'Neuköllner SF-Kanal'
 #> ok. (0.12 secs) 
-#> Calculating flow for section 'Panke' ... ok. (0.08 secs) 
-#> Calculating flow for section 'Rudower Teltowkanal 2' ... ok. (0.08 secs) 
+#> Calculating flow for section 'Panke' ... ok. (0.09 secs) 
+#> Calculating flow for section 'Rudower Teltowkanal 2' ... ok. (0.09 secs) 
 #> Calculating flow for section 'Spree 3' ...
 #> use dynamic & static value for flow from section 'Spree 2' to 'Spree 3'
-#> ok. (0.11 secs) 
+#> ok. (0.12 secs) 
 #> Calculating flow for section 'BSS-Kanal' ...
 #> use dynamic & function for flow from section 'Spree 3' to 'BSS-Kanal'
 #> use dynamic & time series for flow from section 'Panke' to 'BSS-Kanal'
-#> ok. (0.14 secs) 
+#> ok. (0.15 secs) 
 #> Calculating flow for section 'Landwehrkanal' ...
 #> use dynamic & static value for flow from section 'Spree 2' to 'Landwehrkanal'
 #> ok. (0.11 secs) 
 #> Calculating flow for section 'Nordgraben' ...
 #> use dynamic & time series for flow from section 'Panke' to 'Nordgraben'
-#> ok. (0.11 secs) 
-#> Calculating flow for section 'Oberhavel 1' ... ok. (0.08 secs) 
+#> ok. (0.12 secs) 
+#> Calculating flow for section 'Oberhavel 1' ... ok. (0.09 secs) 
 #> Calculating flow for section 'Spree 4' ...
 #> use dynamic & function for flow from section 'Spree 3' to 'Spree 4'
 #> ok. (0.12 secs) 
-#> Calculating flow for section 'Tegeler Fließ' ... ok. (0.08 secs) 
+#> Calculating flow for section 'Tegeler Fließ' ... ok. (0.09 secs) 
 #> Calculating flow for section 'Teltowkanal 1' ...
 #> use dynamic & function for flow from section 'Britzer Verbindungskanal' to 'Teltowkanal 1'
 #> ok. (0.12 secs) 
@@ -318,15 +318,15 @@ system.time(
 #> Calculating flow for section 'Tegeler See' ... ok. (0.09 secs) 
 #> Calculating flow for section 'Teltowkanal 2' ... ok. (0.09 secs) 
 #> Calculating flow for section 'Oberhavel 3' ... ok. (0.09 secs) 
-#> Calculating flow for section 'Spree 6' ... ok. (0.08 secs) 
-#> Calculating flow for section 'Teltowkanal 3' ... ok. (0.08 secs) 
+#> Calculating flow for section 'Spree 6' ... ok. (0.09 secs) 
+#> Calculating flow for section 'Teltowkanal 3' ... ok. (0.09 secs) 
 #> Calculating flow for section 'Unterhavel 1' ... ok. (0.09 secs) 
 #> Calculating flow for section 'Wannsee' ...
 #> use dynamic & function for flow from section 'Teltowkanal 3' to 'Wannsee'
-#> ok. (0.11 secs) 
-#> Calculating flow for section 'Unterhavel 2' ... ok. (0.09 secs)
+#> ok. (0.12 secs) 
+#> Calculating flow for section 'Unterhavel 2' ... ok. (0.10 secs)
 #>    user  system elapsed 
-#>    5.89    0.11    6.01
+#>    6.00    0.16    6.15
 ```
 
 ## Plot Results
@@ -397,9 +397,9 @@ pdff_static <- prepare_plot(flows = flows_bfs_static,
 })
 }
 #> Running for id 1/35 (S04: Müggelsee) ... ok. (0.44 secs) 
-#> Running for id 2/35 (S01: Seddinsee und Gosener Kanal) ... ok. (0.37 secs) 
-#> Running for id 3/35 (S06: Erpe (NH-MF)) ... ok. (0.36 secs) 
-#> Running for id 4/35 (S02: Langer See (Dahme)) ... ok. (0.39 secs) 
+#> Running for id 2/35 (S01: Seddinsee und Gosener Kanal) ... ok. (0.38 secs) 
+#> Running for id 3/35 (S06: Erpe (NH-MF)) ... ok. (0.35 secs) 
+#> Running for id 4/35 (S02: Langer See (Dahme)) ... ok. (0.37 secs) 
 #> Running for id 5/35 (S05a: Müggelspree 2) ...
 #> No outflow to well gallery or managed aquifer recharge for section Müggelspree 2 (S05a)
 #> ok. (0.00 secs) 
@@ -447,7 +447,7 @@ pdff_static <- prepare_plot(flows = flows_bfs_static,
 #> Running for id 21/35 (H01: Nordgraben) ...
 #> No outflow to well gallery or managed aquifer recharge for section Nordgraben (H01)
 #> ok. (0.00 secs) 
-#> Running for id 22/35 (H04: Oberhavel 1) ... ok. (0.38 secs) 
+#> Running for id 22/35 (H04: Oberhavel 1) ... ok. (0.41 secs) 
 #> Running for id 23/35 (S17: Spree 4) ...
 #> No outflow to well gallery or managed aquifer recharge for section Spree 4 (S17)
 #> ok. (0.00 secs) 
@@ -458,8 +458,8 @@ pdff_static <- prepare_plot(flows = flows_bfs_static,
 #> No outflow to well gallery or managed aquifer recharge for section Teltowkanal 1 (S22)
 #> ok. (0.00 secs) 
 #> Running for id 26/35 (H05: Oberhavel 2) ... ok. (0.46 secs) 
-#> Running for id 27/35 (S19: Spree 5) ... ok. (0.44 secs) 
-#> Running for id 28/35 (H03: Tegeler See) ... ok. (0.51 secs) 
+#> Running for id 27/35 (S19: Spree 5) ... ok. (0.45 secs) 
+#> Running for id 28/35 (H03: Tegeler See) ... ok. (0.50 secs) 
 #> Running for id 29/35 (S22a: Teltowkanal 2) ...
 #> No outflow to well gallery or managed aquifer recharge for section Teltowkanal 2 (S22a)
 #> ok. (0.00 secs) 
@@ -475,128 +475,7 @@ pdff_static <- prepare_plot(flows = flows_bfs_static,
 #> Running for id 33/35 (H07: Unterhavel 1) ...
 #> No outflow to well gallery or managed aquifer recharge for section Unterhavel 1 (H07)
 #> ok. (0.00 secs) 
-#> Running for id 34/35 (H09: Wannsee) ... ok. (0.48 secs) 
-#> Running for id 35/35 (H08: Unterhavel 2) ... ok. (0.43 secs) 
-#> [[1]]
-#> 
-#> [[2]]
-#> 
-#> [[3]]
-#> 
-#> [[4]]
-#> 
-#> [[5]]
-#> 
-#> [[6]]
-#> 
-#> [[7]]
-#> Warning: Removed 2 rows containing non-finite outside the scale range
-#> (`stat_boxplot()`).
-#> Warning: Removed 2 rows containing missing values or values outside the scale range
-#> (`geom_point()`).
-#> 
-#> [[8]]
-#> Warning: Removed 13 rows containing non-finite outside the scale range
-#> (`stat_boxplot()`).
-#> Warning: Removed 13 rows containing missing values or values outside the scale range
-#> (`geom_point()`).
-#> 
-#> [[9]]
-#> 
-#> [[10]]
-#> 
-#> [[11]]
-#> Warning: Removed 36 rows containing non-finite outside the scale range
-#> (`stat_boxplot()`).
-#> Warning: Removed 36 rows containing missing values or values outside the scale range
-#> (`geom_point()`).
-#> 
-#> [[12]]
-#> Warning: Removed 1 row containing non-finite outside the scale range
-#> (`stat_boxplot()`).
-#> Warning: Removed 1 row containing missing values or values outside the scale range
-#> (`geom_point()`).
-#> 
-#> Running for id 1/35 (S04: Müggelsee) ... ok. (0.40 secs) 
-#> Running for id 2/35 (S01: Seddinsee und Gosener Kanal) ... ok. (0.36 secs) 
-#> Running for id 3/35 (S06: Erpe (NH-MF)) ... ok. (0.35 secs) 
-#> Running for id 4/35 (S02: Langer See (Dahme)) ... ok. (0.37 secs) 
-#> Running for id 5/35 (S05a: Müggelspree 2) ...
-#> No outflow to well gallery or managed aquifer recharge for section Müggelspree 2 (S05a)
-#> ok. (0.00 secs) 
-#> Running for id 6/35 (S03: Dahme) ...
-#> No outflow to well gallery or managed aquifer recharge for section Dahme (S03)
-#> ok. (0.00 secs) 
-#> Running for id 7/35 (S10: MHG-Graben) ...
-#> No outflow to well gallery or managed aquifer recharge for section MHG-Graben (S10)
-#> ok. (0.00 secs) 
-#> Running for id 8/35 (S05: Müggelspree) ...
-#> No outflow to well gallery or managed aquifer recharge for section Müggelspree (S05)
-#> ok. (0.00 secs) 
-#> Running for id 9/35 (S08: Wuhle) ... ok. (0.37 secs) 
-#> Running for id 10/35 (S11: Rummelsburger See) ...
-#> No outflow to well gallery or managed aquifer recharge for section Rummelsburger See (S11)
-#> ok. (0.00 secs) 
-#> Running for id 11/35 (S07: Spree 1) ... ok. (0.35 secs) 
-#> Running for id 12/35 (S12: Britzer Verbindungskanal) ...
-#> No outflow to well gallery or managed aquifer recharge for section Britzer Verbindungskanal (S12)
-#> ok. (0.00 secs) 
-#> Running for id 13/35 (S21a: Rudower Teltowkanal 1) ...
-#> No outflow to well gallery or managed aquifer recharge for section Rudower Teltowkanal 1 (S21a)
-#> ok. (0.00 secs) 
-#> Running for id 14/35 (S09: Spree 2) ...
-#> No outflow to well gallery or managed aquifer recharge for section Spree 2 (S09)
-#> ok. (0.00 secs) 
-#> Running for id 15/35 (S13: Neuköllner SF-Kanal) ...
-#> No outflow to well gallery or managed aquifer recharge for section Neuköllner SF-Kanal (S13)
-#> ok. (0.00 secs) 
-#> Running for id 16/35 (S16: Panke) ...
-#> No outflow to well gallery or managed aquifer recharge for section Panke (S16)
-#> ok. (0.00 secs) 
-#> Running for id 17/35 (S21: Rudower Teltowkanal 2) ...
-#> No outflow to well gallery or managed aquifer recharge for section Rudower Teltowkanal 2 (S21)
-#> ok. (0.00 secs) 
-#> Running for id 18/35 (S15: Spree 3) ...
-#> No outflow to well gallery or managed aquifer recharge for section Spree 3 (S15)
-#> ok. (0.00 secs) 
-#> Running for id 19/35 (S18: BSS-Kanal) ...
-#> No outflow to well gallery or managed aquifer recharge for section BSS-Kanal (S18)
-#> ok. (0.00 secs) 
-#> Running for id 20/35 (S14: Landwehrkanal) ...
-#> No outflow to well gallery or managed aquifer recharge for section Landwehrkanal (S14)
-#> ok. (0.00 secs) 
-#> Running for id 21/35 (H01: Nordgraben) ...
-#> No outflow to well gallery or managed aquifer recharge for section Nordgraben (H01)
-#> ok. (0.00 secs) 
-#> Running for id 22/35 (H04: Oberhavel 1) ... ok. (0.39 secs) 
-#> Running for id 23/35 (S17: Spree 4) ...
-#> No outflow to well gallery or managed aquifer recharge for section Spree 4 (S17)
-#> ok. (0.00 secs) 
-#> Running for id 24/35 (H02: Tegeler Fließ) ...
-#> No outflow to well gallery or managed aquifer recharge for section Tegeler Fließ (H02)
-#> ok. (0.01 secs) 
-#> Running for id 25/35 (S22: Teltowkanal 1) ...
-#> No outflow to well gallery or managed aquifer recharge for section Teltowkanal 1 (S22)
-#> ok. (0.00 secs) 
-#> Running for id 26/35 (H05: Oberhavel 2) ... ok. (0.46 secs) 
-#> Running for id 27/35 (S19: Spree 5) ... ok. (0.46 secs) 
-#> Running for id 28/35 (H03: Tegeler See) ... ok. (0.48 secs) 
-#> Running for id 29/35 (S22a: Teltowkanal 2) ...
-#> No outflow to well gallery or managed aquifer recharge for section Teltowkanal 2 (S22a)
-#> ok. (0.00 secs) 
-#> Running for id 30/35 (H06: Oberhavel 3) ...
-#> No outflow to well gallery or managed aquifer recharge for section Oberhavel 3 (H06)
-#> ok. (0.00 secs) 
-#> Running for id 31/35 (S20: Spree 6) ...
-#> No outflow to well gallery or managed aquifer recharge for section Spree 6 (S20)
-#> ok. (0.00 secs) 
-#> Running for id 32/35 (S23: Teltowkanal 3) ...
-#> No outflow to well gallery or managed aquifer recharge for section Teltowkanal 3 (S23)
-#> ok. (0.00 secs) 
-#> Running for id 33/35 (H07: Unterhavel 1) ...
-#> No outflow to well gallery or managed aquifer recharge for section Unterhavel 1 (H07)
-#> ok. (0.00 secs) 
-#> Running for id 34/35 (H09: Wannsee) ... ok. (0.44 secs) 
+#> Running for id 34/35 (H09: Wannsee) ... ok. (0.49 secs) 
 #> Running for id 35/35 (H08: Unterhavel 2) ... ok. (0.44 secs) 
 #> [[1]]
 #> 
@@ -639,9 +518,9 @@ pdff_static <- prepare_plot(flows = flows_bfs_static,
 #> (`geom_point()`).
 #> 
 #> Running for id 1/35 (S04: Müggelsee) ... ok. (0.41 secs) 
-#> Running for id 2/35 (S01: Seddinsee und Gosener Kanal) ... ok. (0.36 secs) 
-#> Running for id 3/35 (S06: Erpe (NH-MF)) ... ok. (0.37 secs) 
-#> Running for id 4/35 (S02: Langer See (Dahme)) ... ok. (0.40 secs) 
+#> Running for id 2/35 (S01: Seddinsee und Gosener Kanal) ... ok. (0.37 secs) 
+#> Running for id 3/35 (S06: Erpe (NH-MF)) ... ok. (0.36 secs) 
+#> Running for id 4/35 (S02: Langer See (Dahme)) ... ok. (0.37 secs) 
 #> Running for id 5/35 (S05a: Müggelspree 2) ...
 #> No outflow to well gallery or managed aquifer recharge for section Müggelspree 2 (S05a)
 #> ok. (0.00 secs) 
@@ -654,11 +533,11 @@ pdff_static <- prepare_plot(flows = flows_bfs_static,
 #> Running for id 8/35 (S05: Müggelspree) ...
 #> No outflow to well gallery or managed aquifer recharge for section Müggelspree (S05)
 #> ok. (0.00 secs) 
-#> Running for id 9/35 (S08: Wuhle) ... ok. (0.40 secs) 
+#> Running for id 9/35 (S08: Wuhle) ... ok. (0.39 secs) 
 #> Running for id 10/35 (S11: Rummelsburger See) ...
 #> No outflow to well gallery or managed aquifer recharge for section Rummelsburger See (S11)
 #> ok. (0.00 secs) 
-#> Running for id 11/35 (S07: Spree 1) ... ok. (0.55 secs) 
+#> Running for id 11/35 (S07: Spree 1) ... ok. (0.35 secs) 
 #> Running for id 12/35 (S12: Britzer Verbindungskanal) ...
 #> No outflow to well gallery or managed aquifer recharge for section Britzer Verbindungskanal (S12)
 #> ok. (0.00 secs) 
@@ -689,7 +568,7 @@ pdff_static <- prepare_plot(flows = flows_bfs_static,
 #> Running for id 21/35 (H01: Nordgraben) ...
 #> No outflow to well gallery or managed aquifer recharge for section Nordgraben (H01)
 #> ok. (0.00 secs) 
-#> Running for id 22/35 (H04: Oberhavel 1) ... ok. (0.38 secs) 
+#> Running for id 22/35 (H04: Oberhavel 1) ... ok. (0.39 secs) 
 #> Running for id 23/35 (S17: Spree 4) ...
 #> No outflow to well gallery or managed aquifer recharge for section Spree 4 (S17)
 #> ok. (0.00 secs) 
@@ -698,9 +577,9 @@ pdff_static <- prepare_plot(flows = flows_bfs_static,
 #> ok. (0.00 secs) 
 #> Running for id 25/35 (S22: Teltowkanal 1) ...
 #> No outflow to well gallery or managed aquifer recharge for section Teltowkanal 1 (S22)
-#> ok. (0.00 secs) 
-#> Running for id 26/35 (H05: Oberhavel 2) ... ok. (0.46 secs) 
-#> Running for id 27/35 (S19: Spree 5) ... ok. (0.44 secs) 
+#> ok. (0.01 secs) 
+#> Running for id 26/35 (H05: Oberhavel 2) ... ok. (0.47 secs) 
+#> Running for id 27/35 (S19: Spree 5) ... ok. (0.46 secs) 
 #> Running for id 28/35 (H03: Tegeler See) ... ok. (0.50 secs) 
 #> Running for id 29/35 (S22a: Teltowkanal 2) ...
 #> No outflow to well gallery or managed aquifer recharge for section Teltowkanal 2 (S22a)
@@ -717,8 +596,8 @@ pdff_static <- prepare_plot(flows = flows_bfs_static,
 #> Running for id 33/35 (H07: Unterhavel 1) ...
 #> No outflow to well gallery or managed aquifer recharge for section Unterhavel 1 (H07)
 #> ok. (0.00 secs) 
-#> Running for id 34/35 (H09: Wannsee) ... ok. (0.43 secs) 
-#> Running for id 35/35 (H08: Unterhavel 2) ... ok. (0.61 secs) 
+#> Running for id 34/35 (H09: Wannsee) ... ok. (0.44 secs) 
+#> Running for id 35/35 (H08: Unterhavel 2) ... ok. (0.45 secs) 
 #> [[1]]
 #> 
 #> [[2]]
@@ -759,9 +638,130 @@ pdff_static <- prepare_plot(flows = flows_bfs_static,
 #> Warning: Removed 1 row containing missing values or values outside the scale range
 #> (`geom_point()`).
 #> 
-#> Running for id 1/35 (S04: Müggelsee) ... ok. (0.39 secs) 
-#> Running for id 2/35 (S01: Seddinsee und Gosener Kanal) ... ok. (0.40 secs) 
-#> Running for id 3/35 (S06: Erpe (NH-MF)) ... ok. (0.35 secs) 
+#> Running for id 1/35 (S04: Müggelsee) ... ok. (0.42 secs) 
+#> Running for id 2/35 (S01: Seddinsee und Gosener Kanal) ... ok. (0.38 secs) 
+#> Running for id 3/35 (S06: Erpe (NH-MF)) ... ok. (0.38 secs) 
+#> Running for id 4/35 (S02: Langer See (Dahme)) ... ok. (0.40 secs) 
+#> Running for id 5/35 (S05a: Müggelspree 2) ...
+#> No outflow to well gallery or managed aquifer recharge for section Müggelspree 2 (S05a)
+#> ok. (0.00 secs) 
+#> Running for id 6/35 (S03: Dahme) ...
+#> No outflow to well gallery or managed aquifer recharge for section Dahme (S03)
+#> ok. (0.00 secs) 
+#> Running for id 7/35 (S10: MHG-Graben) ...
+#> No outflow to well gallery or managed aquifer recharge for section MHG-Graben (S10)
+#> ok. (0.00 secs) 
+#> Running for id 8/35 (S05: Müggelspree) ...
+#> No outflow to well gallery or managed aquifer recharge for section Müggelspree (S05)
+#> ok. (0.00 secs) 
+#> Running for id 9/35 (S08: Wuhle) ... ok. (0.40 secs) 
+#> Running for id 10/35 (S11: Rummelsburger See) ...
+#> No outflow to well gallery or managed aquifer recharge for section Rummelsburger See (S11)
+#> ok. (0.00 secs) 
+#> Running for id 11/35 (S07: Spree 1) ... ok. (0.56 secs) 
+#> Running for id 12/35 (S12: Britzer Verbindungskanal) ...
+#> No outflow to well gallery or managed aquifer recharge for section Britzer Verbindungskanal (S12)
+#> ok. (0.00 secs) 
+#> Running for id 13/35 (S21a: Rudower Teltowkanal 1) ...
+#> No outflow to well gallery or managed aquifer recharge for section Rudower Teltowkanal 1 (S21a)
+#> ok. (0.00 secs) 
+#> Running for id 14/35 (S09: Spree 2) ...
+#> No outflow to well gallery or managed aquifer recharge for section Spree 2 (S09)
+#> ok. (0.00 secs) 
+#> Running for id 15/35 (S13: Neuköllner SF-Kanal) ...
+#> No outflow to well gallery or managed aquifer recharge for section Neuköllner SF-Kanal (S13)
+#> ok. (0.00 secs) 
+#> Running for id 16/35 (S16: Panke) ...
+#> No outflow to well gallery or managed aquifer recharge for section Panke (S16)
+#> ok. (0.00 secs) 
+#> Running for id 17/35 (S21: Rudower Teltowkanal 2) ...
+#> No outflow to well gallery or managed aquifer recharge for section Rudower Teltowkanal 2 (S21)
+#> ok. (0.00 secs) 
+#> Running for id 18/35 (S15: Spree 3) ...
+#> No outflow to well gallery or managed aquifer recharge for section Spree 3 (S15)
+#> ok. (0.00 secs) 
+#> Running for id 19/35 (S18: BSS-Kanal) ...
+#> No outflow to well gallery or managed aquifer recharge for section BSS-Kanal (S18)
+#> ok. (0.00 secs) 
+#> Running for id 20/35 (S14: Landwehrkanal) ...
+#> No outflow to well gallery or managed aquifer recharge for section Landwehrkanal (S14)
+#> ok. (0.00 secs) 
+#> Running for id 21/35 (H01: Nordgraben) ...
+#> No outflow to well gallery or managed aquifer recharge for section Nordgraben (H01)
+#> ok. (0.00 secs) 
+#> Running for id 22/35 (H04: Oberhavel 1) ... ok. (0.38 secs) 
+#> Running for id 23/35 (S17: Spree 4) ...
+#> No outflow to well gallery or managed aquifer recharge for section Spree 4 (S17)
+#> ok. (0.00 secs) 
+#> Running for id 24/35 (H02: Tegeler Fließ) ...
+#> No outflow to well gallery or managed aquifer recharge for section Tegeler Fließ (H02)
+#> ok. (0.00 secs) 
+#> Running for id 25/35 (S22: Teltowkanal 1) ...
+#> No outflow to well gallery or managed aquifer recharge for section Teltowkanal 1 (S22)
+#> ok. (0.00 secs) 
+#> Running for id 26/35 (H05: Oberhavel 2) ... ok. (0.45 secs) 
+#> Running for id 27/35 (S19: Spree 5) ... ok. (0.45 secs) 
+#> Running for id 28/35 (H03: Tegeler See) ... ok. (0.51 secs) 
+#> Running for id 29/35 (S22a: Teltowkanal 2) ...
+#> No outflow to well gallery or managed aquifer recharge for section Teltowkanal 2 (S22a)
+#> ok. (0.00 secs) 
+#> Running for id 30/35 (H06: Oberhavel 3) ...
+#> No outflow to well gallery or managed aquifer recharge for section Oberhavel 3 (H06)
+#> ok. (0.00 secs) 
+#> Running for id 31/35 (S20: Spree 6) ...
+#> No outflow to well gallery or managed aquifer recharge for section Spree 6 (S20)
+#> ok. (0.00 secs) 
+#> Running for id 32/35 (S23: Teltowkanal 3) ...
+#> No outflow to well gallery or managed aquifer recharge for section Teltowkanal 3 (S23)
+#> ok. (0.00 secs) 
+#> Running for id 33/35 (H07: Unterhavel 1) ...
+#> No outflow to well gallery or managed aquifer recharge for section Unterhavel 1 (H07)
+#> ok. (0.00 secs) 
+#> Running for id 34/35 (H09: Wannsee) ... ok. (0.44 secs) 
+#> Running for id 35/35 (H08: Unterhavel 2) ... ok. (0.62 secs) 
+#> [[1]]
+#> 
+#> [[2]]
+#> 
+#> [[3]]
+#> 
+#> [[4]]
+#> 
+#> [[5]]
+#> 
+#> [[6]]
+#> 
+#> [[7]]
+#> Warning: Removed 2 rows containing non-finite outside the scale range
+#> (`stat_boxplot()`).
+#> Warning: Removed 2 rows containing missing values or values outside the scale range
+#> (`geom_point()`).
+#> 
+#> [[8]]
+#> Warning: Removed 13 rows containing non-finite outside the scale range
+#> (`stat_boxplot()`).
+#> Warning: Removed 13 rows containing missing values or values outside the scale range
+#> (`geom_point()`).
+#> 
+#> [[9]]
+#> 
+#> [[10]]
+#> 
+#> [[11]]
+#> Warning: Removed 36 rows containing non-finite outside the scale range
+#> (`stat_boxplot()`).
+#> Warning: Removed 36 rows containing missing values or values outside the scale range
+#> (`geom_point()`).
+#> 
+#> [[12]]
+#> Warning: Removed 1 row containing non-finite outside the scale range
+#> (`stat_boxplot()`).
+#> Warning: Removed 1 row containing missing values or values outside the scale range
+#> (`geom_point()`).
+#> 
+#> Running for id 1/35 (S04: Müggelsee) ... ok. (0.40 secs) 
+#> Running for id 2/35 (S01: Seddinsee und Gosener Kanal) ... ok. (0.41 secs) 
+#> Running for id 3/35 (S06: Erpe (NH-MF)) ... ok. (0.36 secs) 
 #> Running for id 4/35 (S02: Langer See (Dahme)) ... ok. (0.37 secs) 
 #> Running for id 5/35 (S05a: Müggelspree 2) ...
 #> No outflow to well gallery or managed aquifer recharge for section Müggelspree 2 (S05a)
@@ -820,9 +820,9 @@ pdff_static <- prepare_plot(flows = flows_bfs_static,
 #> Running for id 25/35 (S22: Teltowkanal 1) ...
 #> No outflow to well gallery or managed aquifer recharge for section Teltowkanal 1 (S22)
 #> ok. (0.00 secs) 
-#> Running for id 26/35 (H05: Oberhavel 2) ... ok. (0.45 secs) 
+#> Running for id 26/35 (H05: Oberhavel 2) ... ok. (0.46 secs) 
 #> Running for id 27/35 (S19: Spree 5) ... ok. (0.44 secs) 
-#> Running for id 28/35 (H03: Tegeler See) ... ok. (0.50 secs) 
+#> Running for id 28/35 (H03: Tegeler See) ... ok. (0.51 secs) 
 #> Running for id 29/35 (S22a: Teltowkanal 2) ...
 #> No outflow to well gallery or managed aquifer recharge for section Teltowkanal 2 (S22a)
 #> ok. (0.00 secs) 
@@ -881,9 +881,9 @@ pdff_static <- prepare_plot(flows = flows_bfs_static,
 #> (`geom_point()`).
 #> 
 #> Running for id 1/35 (S04: Müggelsee) ... ok. (0.42 secs) 
-#> Running for id 2/35 (S01: Seddinsee und Gosener Kanal) ... ok. (0.38 secs) 
-#> Running for id 3/35 (S06: Erpe (NH-MF)) ... ok. (0.40 secs) 
-#> Running for id 4/35 (S02: Langer See (Dahme)) ... ok. (0.38 secs) 
+#> Running for id 2/35 (S01: Seddinsee und Gosener Kanal) ... ok. (0.37 secs) 
+#> Running for id 3/35 (S06: Erpe (NH-MF)) ... ok. (0.39 secs) 
+#> Running for id 4/35 (S02: Langer See (Dahme)) ... ok. (0.39 secs) 
 #> Running for id 5/35 (S05a: Müggelspree 2) ...
 #> No outflow to well gallery or managed aquifer recharge for section Müggelspree 2 (S05a)
 #> ok. (0.00 secs) 
@@ -896,11 +896,11 @@ pdff_static <- prepare_plot(flows = flows_bfs_static,
 #> Running for id 8/35 (S05: Müggelspree) ...
 #> No outflow to well gallery or managed aquifer recharge for section Müggelspree (S05)
 #> ok. (0.00 secs) 
-#> Running for id 9/35 (S08: Wuhle) ... ok. (0.39 secs) 
+#> Running for id 9/35 (S08: Wuhle) ... ok. (0.40 secs) 
 #> Running for id 10/35 (S11: Rummelsburger See) ...
 #> No outflow to well gallery or managed aquifer recharge for section Rummelsburger See (S11)
 #> ok. (0.00 secs) 
-#> Running for id 11/35 (S07: Spree 1) ... ok. (0.40 secs) 
+#> Running for id 11/35 (S07: Spree 1) ... ok. (0.57 secs) 
 #> Running for id 12/35 (S12: Britzer Verbindungskanal) ...
 #> No outflow to well gallery or managed aquifer recharge for section Britzer Verbindungskanal (S12)
 #> ok. (0.00 secs) 
@@ -931,7 +931,7 @@ pdff_static <- prepare_plot(flows = flows_bfs_static,
 #> Running for id 21/35 (H01: Nordgraben) ...
 #> No outflow to well gallery or managed aquifer recharge for section Nordgraben (H01)
 #> ok. (0.00 secs) 
-#> Running for id 22/35 (H04: Oberhavel 1) ... ok. (0.57 secs) 
+#> Running for id 22/35 (H04: Oberhavel 1) ... ok. (0.39 secs) 
 #> Running for id 23/35 (S17: Spree 4) ...
 #> No outflow to well gallery or managed aquifer recharge for section Spree 4 (S17)
 #> ok. (0.00 secs) 
@@ -941,9 +941,9 @@ pdff_static <- prepare_plot(flows = flows_bfs_static,
 #> Running for id 25/35 (S22: Teltowkanal 1) ...
 #> No outflow to well gallery or managed aquifer recharge for section Teltowkanal 1 (S22)
 #> ok. (0.00 secs) 
-#> Running for id 26/35 (H05: Oberhavel 2) ... ok. (0.64 secs) 
-#> Running for id 27/35 (S19: Spree 5) ... ok. (0.44 secs) 
-#> Running for id 28/35 (H03: Tegeler See) ... ok. (0.50 secs) 
+#> Running for id 26/35 (H05: Oberhavel 2) ... ok. (0.62 secs) 
+#> Running for id 27/35 (S19: Spree 5) ... ok. (0.45 secs) 
+#> Running for id 28/35 (H03: Tegeler See) ... ok. (0.49 secs) 
 #> Running for id 29/35 (S22a: Teltowkanal 2) ...
 #> No outflow to well gallery or managed aquifer recharge for section Teltowkanal 2 (S22a)
 #> ok. (0.00 secs) 
@@ -959,7 +959,7 @@ pdff_static <- prepare_plot(flows = flows_bfs_static,
 #> Running for id 33/35 (H07: Unterhavel 1) ...
 #> No outflow to well gallery or managed aquifer recharge for section Unterhavel 1 (H07)
 #> ok. (0.00 secs) 
-#> Running for id 34/35 (H09: Wannsee) ... ok. (0.43 secs) 
+#> Running for id 34/35 (H09: Wannsee) ... ok. (0.44 secs) 
 #> Running for id 35/35 (H08: Unterhavel 2) ... ok. (0.44 secs) 
 #> [[1]]
 #> 
@@ -1002,9 +1002,9 @@ pdff_static <- prepare_plot(flows = flows_bfs_static,
 #> (`geom_point()`).
 #> 
 #> Running for id 1/35 (S04: Müggelsee) ... ok. (0.42 secs) 
-#> Running for id 2/35 (S01: Seddinsee und Gosener Kanal) ... ok. (0.36 secs) 
-#> Running for id 3/35 (S06: Erpe (NH-MF)) ... ok. (0.36 secs) 
-#> Running for id 4/35 (S02: Langer See (Dahme)) ... ok. (0.38 secs) 
+#> Running for id 2/35 (S01: Seddinsee und Gosener Kanal) ... ok. (0.37 secs) 
+#> Running for id 3/35 (S06: Erpe (NH-MF)) ... ok. (0.37 secs) 
+#> Running for id 4/35 (S02: Langer See (Dahme)) ... ok. (0.39 secs) 
 #> Running for id 5/35 (S05a: Müggelspree 2) ...
 #> No outflow to well gallery or managed aquifer recharge for section Müggelspree 2 (S05a)
 #> ok. (0.00 secs) 
@@ -1052,7 +1052,7 @@ pdff_static <- prepare_plot(flows = flows_bfs_static,
 #> Running for id 21/35 (H01: Nordgraben) ...
 #> No outflow to well gallery or managed aquifer recharge for section Nordgraben (H01)
 #> ok. (0.00 secs) 
-#> Running for id 22/35 (H04: Oberhavel 1) ... ok. (0.40 secs) 
+#> Running for id 22/35 (H04: Oberhavel 1) ... ok. (0.41 secs) 
 #> Running for id 23/35 (S17: Spree 4) ...
 #> No outflow to well gallery or managed aquifer recharge for section Spree 4 (S17)
 #> ok. (0.00 secs) 
@@ -1062,8 +1062,8 @@ pdff_static <- prepare_plot(flows = flows_bfs_static,
 #> Running for id 25/35 (S22: Teltowkanal 1) ...
 #> No outflow to well gallery or managed aquifer recharge for section Teltowkanal 1 (S22)
 #> ok. (0.00 secs) 
-#> Running for id 26/35 (H05: Oberhavel 2) ... ok. (0.47 secs) 
-#> Running for id 27/35 (S19: Spree 5) ... ok. (0.47 secs) 
+#> Running for id 26/35 (H05: Oberhavel 2) ... ok. (0.46 secs) 
+#> Running for id 27/35 (S19: Spree 5) ... ok. (0.46 secs) 
 #> Running for id 28/35 (H03: Tegeler See) ... ok. (0.51 secs) 
 #> Running for id 29/35 (S22a: Teltowkanal 2) ...
 #> No outflow to well gallery or managed aquifer recharge for section Teltowkanal 2 (S22a)
@@ -1080,7 +1080,7 @@ pdff_static <- prepare_plot(flows = flows_bfs_static,
 #> Running for id 33/35 (H07: Unterhavel 1) ...
 #> No outflow to well gallery or managed aquifer recharge for section Unterhavel 1 (H07)
 #> ok. (0.00 secs) 
-#> Running for id 34/35 (H09: Wannsee) ... ok. (0.49 secs) 
+#> Running for id 34/35 (H09: Wannsee) ... ok. (0.50 secs) 
 #> Running for id 35/35 (H08: Unterhavel 2) ... ok. (0.45 secs) 
 #> [[1]]
 #> 
