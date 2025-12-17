@@ -16,7 +16,8 @@ aggregate_qualities_monthly(
 
 - qualities:
 
-  list as retrieved by `calcualate_qualities`
+  list as retrieved by
+  [`calculate_qualities`](https://kwb-r.github.io/kwb.BerlinWaterModel.public/reference/calculate_qualities.md)
 
 - aggregation_function:
 

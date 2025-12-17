@@ -24,27 +24,29 @@ calculate_qualities_forward(
 
 - flows:
 
-  flows as retrieved by xxxx
+  tibble with (modelled) flows for the network (e.g. precomputed
+  upstream by the user)
 
 - network:
 
   tibble with water cycle flow network data, as retrieved by
-  `{`[`prepare_network`](https://kwb-r.github.io/kwb.BerlinWaterModel.public/reference/prepare_network.md)`}`
+  [`prepare_network`](https://kwb-r.github.io/kwb.BerlinWaterModel.public/reference/prepare_network.md)
 
 - config:
 
   list with config as imported with
   [`config_read`](https://kwb-r.github.io/kwb.BerlinWaterModel.public/reference/config_read.md)
 
+- max_sections:
+
+  restrict number of calculated sections in case problems occur. Provide
+  a number \<= number of sections to be calculated. If NULL, all
+  sections will be calculated (default: NULL). Only used if reverse_flow
+  = FALSE
+
 - debug:
 
   print debug messages (default: TRUE)
-
-- max_section:
-
-  restrict number of calculated sections in case problem occcur. Provide
-  a number \<= number of sections to be calculated. If NULL, all
-  sections will be calculated (default: NULL).
 
 ## Value
 

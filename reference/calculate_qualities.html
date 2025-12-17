@@ -65,12 +65,13 @@
 
 
 <dt id="arg-flows">flows<a class="anchor" aria-label="anchor" href="#arg-flows"></a></dt>
-<dd><p>flows as retrieved by xxxx</p></dd>
+<dd><p>tibble with (modelled) flows for the network (e.g. precomputed
+upstream by the user)</p></dd>
 
 
 <dt id="arg-network">network<a class="anchor" aria-label="anchor" href="#arg-network"></a></dt>
 <dd><p>tibble with water cycle flow network data, as retrieved by
-<code>{<a href="prepare_network.html">prepare_network</a>}</code></p></dd>
+<code><a href="prepare_network.html">prepare_network</a></code></p></dd>
 
 
 <dt id="arg-config">config<a class="anchor" aria-label="anchor" href="#arg-config"></a></dt>
@@ -86,19 +87,19 @@
 calculations (default: TRUE)</p></dd>
 
 
+<dt id="arg-max-sections">max_sections<a class="anchor" aria-label="anchor" href="#arg-max-sections"></a></dt>
+<dd><p>restrict number of calculated sections in case problems
+occur. Provide a number &lt;= number of sections to be calculated. If NULL, all
+sections will be calculated (default: NULL). Only used if reverse_flow = FALSE</p></dd>
+
+
 <dt id="arg-debug">debug<a class="anchor" aria-label="anchor" href="#arg-debug"></a></dt>
 <dd><p>print debug messages (default: TRUE)</p></dd>
-
-
-<dt id="arg-max-section">max_section<a class="anchor" aria-label="anchor" href="#arg-max-section"></a></dt>
-<dd><p>restrict number of calculated sections in case problem
-occcur. Provide a number &lt;= number of sections to be calculated. If NULL, all
-sections will be calculated (default: NULL). Only used if reverse_flow = FALSE</p></dd>
 
 </dl></div>
     <div class="section level2">
     <h2 id="value">Value<a class="anchor" aria-label="anchor" href="#value"></a></h2>
-    <p>returns modelled flows in tibble format</p>
+    <p>returns modelled qualities in tibble format</p>
     </div>
 
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
