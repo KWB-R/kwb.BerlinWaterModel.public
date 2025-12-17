@@ -86,15 +86,15 @@ get_date_or_datetime_columns <- function(df) {
 
   # Durch alle Spalten des DataFrames iterieren
   for (col_name in names(df)) {
-    # Überprüfen, ob der Typ der Spalte Date oder POSIXct ist
+    # Überpruefen, ob der Typ der Spalte Date oder POSIXct ist
     if (inherits(df[[col_name]], "Date") ||
         inherits(df[[col_name]], "POSIXct")) {
-      # Den Namen der Spalte zur Liste hinzufügen
+      # Den Namen der Spalte zur Liste hinzufuegen
       date_or_datetime_columns <- c(date_or_datetime_columns, col_name)
     }
   }
 
-  # Rückgabe der Liste der Spaltennamen
+  # Rueckgabe der Liste der Spaltennamen
   return(date_or_datetime_columns)
 }
 
@@ -382,11 +382,11 @@ flows_sections_below_zero
 #' depending on the `"temporal_resolution"` attribute of the input.
 #'
 #' The returned statistics include:
-#' * **MQ** – Mean discharge
-#' * **MNQ_years** – Mean of yearly minimum values (yearly low flows)
-#' * **MHQ_years** – Mean of yearly maximum values (yearly high flows)
-#' * **NNQ** – Overall minimum discharge (absolute low flow)
-#' * **HHQ** – Overall maximum discharge (absolute high flow)
+#' * **MQ** Mean discharge
+#' * **MNQ_years** Mean of yearly minimum values (yearly low flows)
+#' * **MHQ_years** Mean of yearly maximum values (yearly high flows)
+#' * **NNQ** Overall minimum discharge (absolute low flow)
+#' * **HHQ** Overall maximum discharge (absolute high flow)
 #'
 #' Additional tables contain statistics per year and per month, including
 #' monthly mean, monthly minimum, and monthly maximum discharges.
@@ -429,11 +429,11 @@ calculate_flow_stats <- function(flows) {
     if (col_date_or_datetime == "date") {
     flows_long_years_months <- flows_long %>%
       dplyr::mutate(year = lubridate::year(date), month = lubridate::month(date))
-    message("Berechnung der Gewässerkennwerte aus den Tageswerten.")
+    message("Berechnung der Gewaesserkennwerte aus den Tageswerten.")
     } else  {
     flows_long_years_months <- flows_long %>%
       dplyr::mutate(year = lubridate::year(datetime), month = lubridate::month(datetime))
-      message("Berechnung der Gewässerkennwerte aus den Stundenwerten. Üblicherweise werden die Gewässerkennwerte aus den Tagesmittelwerten berechnet!")
+      message("Berechnung der Gewaesserkennwerte aus den Stundenwerten. Ueblicherweise werden die Gewaesserkennwerte aus den Tagesmittelwerten berechnet!")
     }
 
   flows_stats_section <- flows_long_years_months %>%
@@ -538,7 +538,7 @@ merge_two_level_lists <- function(x, y, prefer = c("left", "right")) {
     if (is.null(sx)) return(sy)
     if (is.null(sy)) return(sx)
 
-    # Beide Sublisten vorhanden -> Subkeys vereinigen und je nach 'prefer' zusammenführen
+    # Beide Sublisten vorhanden -> Subkeys vereinigen und je nach 'prefer' zusammenfuehren
     all_sub <- union(names(sx), names(sy))
     stats::setNames(lapply(all_sub, function(sub_key) {
       vx <- sx[[sub_key]]
