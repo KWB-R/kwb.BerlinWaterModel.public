@@ -20,7 +20,7 @@
 #' @param  date_separation_panke_1_2 date to separate shares before (i.e. share_wwtp_sch_panke_1)
 #' and after (share_wwtp_sch_panke_2) given date (default: "2025-04-15")
 #' (default: 1 - share_wwtp_sch_panke); only used if share_wwtp_sch_to_nordgraben_timeseries == FALSE
-#' @param share_wwtp_sch_panke_1 share of WWTP Schoenerlinde to Panke before (default: 0.9)
+#' @param share_wwtp_sch_panke_2 share of WWTP Schoenerlinde to Panke before (default: 0.9)
 #' date_separation_panke_1_2; only used if share_wwtp_sch_to_nordgraben_timeseries == FALSE
 #' @param col_wwtp_sch  column name of WWTP Schoenerlinde (default: "Q_KW_SCH")
 #' @param col_wwtp_sch_nordgraben  column name of WWTP Schoenerlinde outflow to
