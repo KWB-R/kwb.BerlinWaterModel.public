@@ -57,9 +57,18 @@ jobs:
           key: ${{ runner.os }}-r-${{ matrix.config.r }}-3-${{ hashFiles('depends.Rds') }}
           restore-keys: ${{ runner.os }}-r-${{ matrix.config.r }}-3-
 
-      - name: Install linux system dependencies
+      - name: Install Linux system dependencies
         if: runner.os == 'Linux'
-        run: sudo apt-get install -y libglpk-dev
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            libudunits2-dev \
+            udunits-bin \
+            libgdal-dev \
+            libgeos-dev \
+            libproj-dev \
+            libglpk-dev
+
 
       - name: Install dependencies
         run: |
@@ -77,4 +86,3 @@ jobs:
         with:
           name: ${{ runner.os }}-r${{ matrix.config.r }}-results
           path: check
-
