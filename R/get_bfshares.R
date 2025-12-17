@@ -13,6 +13,7 @@
 #' pull
 #' @importFrom stringr str_starts str_sub
 #' @importFrom tidyr replace_na
+#' @importFrom gridExtra grid.arrange
 #' @export
 #'
 get_bfshares <- function(config,
