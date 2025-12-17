@@ -30,5 +30,5 @@ b <- 2
 parse_a_and_b(a, b)
 #> function (Q) 
 #> 100/(1 + exp(-(2 * log(Q) - 1)))
-#> <environment: 0x000001ff7ea04820>
+#> <environment: 0x0000028ec8c05968>
 ```
