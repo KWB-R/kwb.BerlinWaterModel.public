@@ -16,18 +16,19 @@ calculate_qualities_forward(
 \arguments{
 \item{input_list}{input_list as retrieved by \code{\link{prepare_input}}}
 
-\item{flows}{flows as retrieved by xxxx}
+\item{flows}{tibble with (modelled) flows for the network (e.g. precomputed
+upstream by the user)}
 
 \item{network}{tibble with water cycle flow network data, as retrieved by
-\code{{\link{prepare_network}}}}
+\code{\link{prepare_network}}}
 
 \item{config}{list with config as imported with \code{\link{config_read}}}
 
-\item{debug}{print debug messages (default: TRUE)}
+\item{max_sections}{restrict number of calculated sections in case problems
+occur. Provide a number <= number of sections to be calculated. If NULL, all
+sections will be calculated (default: NULL). Only used if reverse_flow = FALSE}
 
-\item{max_section}{restrict number of calculated sections in case problem
-occcur. Provide a number <= number of sections to be calculated. If NULL, all
-sections will be calculated (default: NULL).}
+\item{debug}{print debug messages (default: TRUE)}
 }
 \value{
 returns modelled flows in tibble format

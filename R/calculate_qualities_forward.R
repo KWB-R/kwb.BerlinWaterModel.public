@@ -1,13 +1,14 @@
 #' Calculate Qualities Forward
 #'
 #' @param input_list input_list as retrieved by \code{\link{prepare_input}}
-#' @param flows flows as retrieved by xxxx
+#' @param flows tibble with (modelled) flows for the network (e.g. precomputed
+#'   upstream by the user)
 #' @param network tibble with water cycle flow network data, as retrieved by
-#' \code{{\link{prepare_network}}}
+#'   \code{\link{prepare_network}}
 #' @param config list with config as imported with \code{\link{config_read}}
-#' @param max_section restrict number of calculated sections in case problem
-#' occcur. Provide a number <= number of sections to be calculated. If NULL, all
-#' sections will be calculated (default: NULL).
+#' @param max_sections restrict number of calculated sections in case problems
+#'   occur. Provide a number <= number of sections to be calculated. If NULL, all
+#'   sections will be calculated (default: NULL). Only used if reverse_flow = FALSE
 #' @param debug print debug messages (default: TRUE)
 #'
 #' @return returns modelled flows in tibble format
