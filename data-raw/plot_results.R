@@ -56,7 +56,7 @@ dat <- qualities$conc %>%
 # plots for each section with all tracers in pdf #########################################################
 ##########################################################################################################
 
-pdff <- sprintf("section_concentrations_%s_2002-2022_tracer.pdf", temporal_resolution)
+pdff <- sprintf("section_concentrations_%s_tracer_test.pdf", temporal_resolution)
 
 kwb.utils::preparePdf(pdfFile = pdff)
 

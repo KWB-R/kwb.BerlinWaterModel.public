@@ -1,9 +1,0 @@
-section_id;section_name;section_in_id;section_out_id;volume_m3;mean_depth_m
-S01;Seddinsee und Gosener Kanal;inlet;S02;10500000;4.01
-S02;Langer See (Dahme);S01;S03;12050000;3.92
-S03;Dahme;S02;MO_S03;5900000;3.82
-S04;Müggelsee;inlet;S05;36500000;4.77
-S05;Müggelspree;S04;S07;1300000;2.34
-S06;Erpe (NH-MF);inlet;S05;15000;0.5
-S07;Spree 1;S05;S09;2100000;2.47
-S08;Wuhle;inlet;S07;15000;0.5
