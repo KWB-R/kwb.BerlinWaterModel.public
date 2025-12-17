@@ -11,7 +11,7 @@ aggregate_qualities_monthly(
 )
 }
 \arguments{
-\item{qualities}{list as retrieved by \code{\link{calcualate_qualities}}}
+\item{qualities}{list as retrieved by \code{\link{calculate_qualities}}}
 
 \item{aggregation_function}{function used for aggregation (default: median)}
 

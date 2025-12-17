@@ -1,6 +1,6 @@
 #' Aggregate Qualities Monthly
 #'
-#' @param qualities list as retrieved by \code{\link{calcualate_qualities}}
+#' @param qualities list as retrieved by \code{\link{calculate_qualities}}
 #' @param aggregation_function function used for aggregation (default: median)
 #' @param minimum_tracer_sum minimum tracer sum (default: 0.999 i.e. 99.9 percent)
 #' for filtering out results for with tracer has not reached almost 100 percent
