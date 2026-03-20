@@ -26,6 +26,8 @@ config_dir <- system.file("extdata/config/network_complete_mean-start-conc",
 
 config <- kwb.BerlinWaterModel.public::config_read(config_dir = config_dir)
 
+config <- kwb.BerlinWaterModel.public::add_rain_direct_and_evaporation(config)
+
 config <- kwb.BerlinWaterModel.public::add_tracers(config)
 
 network <- kwb.BerlinWaterModel.public::prepare_network(config)
