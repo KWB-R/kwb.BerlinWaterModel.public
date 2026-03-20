@@ -1,0 +1,21 @@
+{
+  "title": "kwb.BerlinWaterModel.public",
+  "upload_type": "software",
+  "creators": [
+    {
+      "name": "Rustler, Michael",
+      "affiliation": "Kompetenzzentrum Wasser Berlin gGmbH (KWB)",
+      "orcid": "0000-0003-0647-7726"
+    },
+    {
+      "name": "Wicke, Daniel",
+      "affiliation": "Kompetenzzentrum Wasser Berlin gGmbH (KWB)",
+      "orcid": "0000-0002-5722-5433"
+    }
+  ],
+  "grants": [
+    {
+      "id": "10.13039/501100000780::101037084"
+    }
+  ]
+}
