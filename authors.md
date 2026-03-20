@@ -20,7 +20,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/KWB-R/kwb.BerlinWaterModel.public/blob/dev/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/KWB-R/kwb.BerlinWaterModel.public/blob/main/DESCRIPTION)
 
 Rustler M, Wicke D (2026). *kwb.BerlinWaterModel.public: R Package of
 Berlin Water Model*. R package version 0.2.0,
