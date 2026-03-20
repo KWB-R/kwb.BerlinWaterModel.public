@@ -42,15 +42,15 @@ A list with three elements:
 
 The returned statistics include:
 
-- **MQ** – Mean discharge
+- **MQ** Mean discharge
 
-- **MNQ_years** – Mean of yearly minimum values (yearly low flows)
+- **MNQ_years** Mean of yearly minimum values (yearly low flows)
 
-- **MHQ_years** – Mean of yearly maximum values (yearly high flows)
+- **MHQ_years** Mean of yearly maximum values (yearly high flows)
 
-- **NNQ** – Overall minimum discharge (absolute low flow)
+- **NNQ** Overall minimum discharge (absolute low flow)
 
-- **HHQ** – Overall maximum discharge (absolute high flow)
+- **HHQ** Overall maximum discharge (absolute high flow)
 
 Additional tables contain statistics per year and per month, including
 monthly mean, monthly minimum, and monthly maximum discharges.

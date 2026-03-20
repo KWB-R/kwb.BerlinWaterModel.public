@@ -62,8 +62,8 @@
 - [`convert_concentration_units()`](https://kwb-r.github.io/kwb.BerlinWaterModel.public/reference/convert_concentration_units.md)
   : Convert concentration units to kg/m3
 - [`cso`](https://kwb-r.github.io/kwb.BerlinWaterModel.public/reference/cso.md)
-  : Dataset: Combined Sewer Overflows (cso) for a few rainfall events
-  simulated with Infoworks
+  : Dataset: Combined Sewer Overflows (cso) for one rainfall event
+  simulated with Infoworks in 2019
 - [`evapo_p`](https://kwb-r.github.io/kwb.BerlinWaterModel.public/reference/evapo_p.md)
   : Dataset: Daily Potential Evaporation from DWD
 - [`fill_month_to_start()`](https://kwb-r.github.io/kwb.BerlinWaterModel.public/reference/fill_month_to_start.md)

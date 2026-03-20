@@ -10,7 +10,7 @@ inflows
 
 ## Format
 
-A tibble with 398,840 rows and three columns
+A tibble with 21,170 rows and three columns
 
 - date:
 
@@ -22,4 +22,4 @@ A tibble with 398,840 rows and three columns
 
 - cbm_per_second:
 
-  measured flow in cubicmeter per second
+  daily average flow in cubicmeter per second

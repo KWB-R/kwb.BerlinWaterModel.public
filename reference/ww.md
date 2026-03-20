@@ -10,7 +10,7 @@ ww
 
 ## Format
 
-A tibble with 17,141 rows and three columns
+A tibble with 828 rows and three columns
 
 - date:
 

@@ -10,7 +10,7 @@ evapo_p
 
 ## Format
 
-A tibble with 7,670 rows and 10 columns:
+A tibble with 365 rows and 10 columns:
 
 - file:
 
