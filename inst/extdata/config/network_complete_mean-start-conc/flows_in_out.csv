@@ -43,9 +43,6 @@ S16;Q_KW_SCH_Panke;Einleitung Klärwerk Schönerlinde (Teil Panke);;;;;;;in;WWTP
 S17;CSO_4;Mischwasserüberläufe Stadtspree ab Abzweig BSSK;;;;;;;in;CSO;
 S18;ageb1_400;Regenabfluss in Kanäle nördlich der Spree;0,344;7650351;1571770;DWD_0433;;;in;rain_runoff;
 S18;CSO_5;Mischwasserüberläufe BSSK;;;;;;;in;CSO;
-S19;WW_JUN_Ost;Wasserwerk Jungfernheide Ost-Galerie;;;;;0,3;;out;abstraction_WW;
-S19;WW_JUN_West;Wasserwerk Jungfernheide West-Galerie;;;;;0,3;;out;abstraction_WW;
-S19;WW_JUN_Sued;Wasserwerk Jungfernheide Süd-Galerie;;;;;0,3;;out;abstraction_WW;
 S19;WW_JUN_GWA;Wasserwerk Jungfernheide GWA;;;;;1;;out;abstraction_WW;
 S19;CSO_6;Mischwasserüberläufe Stadtspree (Spree 5);;;;;;;in;CSO;
 S20;ageb1_390;Regenabfluss in Stadtspree bis Mündung;0,257;7417154;1152508;DWD_0433;;;in;rain_runoff;
