@@ -1,7 +1,7 @@
 #' Configuration: Read
 #'
 #' @param config_dir directory with configuration files (default:
-#' system.file("extdata/config/network_complete", package = "kwb.BerlinWaterModel")). It is mandatory
+#' system.file("extdata/config/network_complete_mean-start-conc", package = "kwb.BerlinWaterModel")). It is mandatory
 #' that there are three files within this folder: "flows_in_out.csv", "outflows_multiple.csv"
 #' and "sections.csv"
 #' @param file_encoding encoding for reading the files (default: "UTF-8")
@@ -16,7 +16,7 @@
 #' @importFrom stats setNames
 #' @importFrom readr read_csv2 locale
 #' @importFrom stringr str_remove
-config_read <- function(config_dir = system.file("extdata/config/network_complete",
+config_read <- function(config_dir = system.file("extdata/config/network_complete_mean-start-conc",
                                                  package = "kwb.BerlinWaterModel.public"),
                         file_encoding = "UTF-8") {
 
