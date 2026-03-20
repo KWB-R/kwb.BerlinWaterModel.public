@@ -5,7 +5,7 @@
 \alias{wwtp}
 \title{Dataset: WWTP (Wastewater Treatment Plant) Flows}
 \format{
-A tibble with 1,152 rows and three columns
+A tibble with 4015 rows and three columns
 \describe{
 \item{date}{date}
 \item{id}{id of WWTP}

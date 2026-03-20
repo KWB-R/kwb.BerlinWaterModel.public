@@ -31,11 +31,11 @@ depending on the \code{"temporal_resolution"} attribute of the input.
 \details{
 The returned statistics include:
 \itemize{
-\item \strong{MQ} – Mean discharge
-\item \strong{MNQ_years} – Mean of yearly minimum values (yearly low flows)
-\item \strong{MHQ_years} – Mean of yearly maximum values (yearly high flows)
-\item \strong{NNQ} – Overall minimum discharge (absolute low flow)
-\item \strong{HHQ} – Overall maximum discharge (absolute high flow)
+\item \strong{MQ} Mean discharge
+\item \strong{MNQ_years} Mean of yearly minimum values (yearly low flows)
+\item \strong{MHQ_years} Mean of yearly maximum values (yearly high flows)
+\item \strong{NNQ} Overall minimum discharge (absolute low flow)
+\item \strong{HHQ} Overall maximum discharge (absolute high flow)
 }
 
 Additional tables contain statistics per year and per month, including

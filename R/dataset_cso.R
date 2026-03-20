@@ -1,8 +1,9 @@
-#' Dataset: Combined Sewer Overflows (cso) for a few rainfall events simulated with Infoworks
+#' Dataset: Combined Sewer Overflows (cso) for one rainfall event simulated with Infoworks in 2019
 #'
-#' Dataset with combined sewer overflow events for a few rainfall events simulated with Infoworks
+#' Dataset with combined sewer overflow events for one rainfall rainfall event simulated with Infoworks
+#' in 2019
 #'
-#' @format A tibble with 336,672 rows and five columns
+#' @format A tibble with 12,096 rows and five columns
 #' \describe{
 #'   \item{file_name}{filename of data origin}
 #'   \item{datetime}{datetime}

@@ -5,7 +5,7 @@
 \alias{evapo_p}
 \title{Dataset: Daily Potential Evaporation from DWD}
 \format{
-A tibble with 7,670 rows and 10 columns:
+A tibble with 365 rows and 10 columns:
 \describe{
 \item{file}{Name of the file from the DWD https/ftp server}
 \item{date}{Date}

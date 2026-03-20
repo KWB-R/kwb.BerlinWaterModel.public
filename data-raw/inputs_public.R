@@ -1,16 +1,16 @@
 config <- kwb.BerlinWaterModel.public::config_read(config_dir = "inst/extdata/config/network_complete")
 
-datetime_min <- lubridate::as_datetime("2018-01-01 00:00:00", tz = "UTC")
-datetime_max <- lubridate::as_datetime("2018-12-31 23:59:59", tz = "UTC")
-reduce_temporal_coverage <- FALSE
-no_ww_and_wwtp <- TRUE
+datetime_min <- lubridate::as_datetime("2019-01-01 00:00:00", tz = "UTC")
+datetime_max <- lubridate::as_datetime("2019-12-31 23:59:59", tz = "UTC")
+reduce_temporal_coverage <- TRUE
+no_ww_and_wwtp <- FALSETRUE
 
 ################################################################################################
 # CSO data #####################################################################################
 ################################################################################################
 
-unzip("inst/extdata/input_data/cso/cso.zip",
-      exdir = "inst/extdata/input_data/cso/csv/")
+# unzip("inst/extdata/input_data/cso/cso.zip",
+#       exdir = "inst/extdata/input_data/cso/csv/")
 
 cso_files <- list.files("inst/extdata/input_data/cso/csv/",
                         pattern = "\\.csv$",
@@ -347,3 +347,61 @@ rain <- if(reduce_temporal_coverage) {
 
 usethis::use_data(rain, overwrite = TRUE)
 
+
+# 4. Wasserflächen vorbereiten
+url <- "https://fbinter.stadt-berlin.de/fb/atom/Gewaesserkarte/Gewaesserkarte.zip"
+tfile <- basename(url)
+
+download.file(url, destfile = basename(url))
+
+unzip(zipfile = tfile,
+      exdir = "lakes_berlin")
+
+
+lakes_berlin <- sf::read_sf("lakes_berlin/Gewaesser_Berlin_Flaechen.shp",
+                            options = "ENCODING=WINDOWS-1252") %>%
+  dplyr::mutate(area = sf::st_area(.) %>% as.numeric()) %>%
+  dplyr::arrange(dplyr::desc(area)) %>%
+  sf::st_transform(4326) %>%
+  sf::st_make_valid()
+
+
+lakes_berlin_sel <- lakes_berlin %>%
+  dplyr::filter(area > 150000)
+
+
+## DWD datasets
+remotes::install_github("kwb-r/kwb.dwd@get-rid-of-rgdal")
+
+
+sf::write_sf(lakes_berlin_sel, "lakes_berlin_selected.shp")
+shape_file <- "lakes_berlin_selected.shp"
+
+
+
+# Only data of full months can currently be read!
+evapo_p_raw <- kwb.dwd::read_daily_data_over_shape(
+  #file = shape_file,
+  shape = lakes_berlin_sel,
+  variable = "evapo_p",
+  from = "201901",
+  to = "201912"
+  #to = "202212"
+)
+
+
+evapo_p <- evapo_p_raw %>%
+  dplyr::mutate(date = sprintf("%02d-%02d-%02d", year, month, day) %>%  as.Date()) %>%
+  tibble::as_tibble()
+
+
+evapo_p  <- if(reduce_temporal_coverage) {
+  evapo_p  %>%
+    dplyr::filter(date  >= lubridate::as_date(datetime_min),
+                  date <= lubridate::as_date(datetime_max))
+} else {
+  evapo_p
+}
+
+
+usethis::use_data(evapo_p, overwrite = TRUE)

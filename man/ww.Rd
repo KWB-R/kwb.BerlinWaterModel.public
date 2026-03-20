@@ -5,7 +5,7 @@
 \alias{ww}
 \title{Dataset: Waterworks (WW) Abstractions per Gallery}
 \format{
-A tibble with 17,141 rows and three columns
+A tibble with 828 rows and three columns
 \describe{
 \item{date}{date}
 \item{id}{id of WW gallery}
