@@ -6,7 +6,7 @@ Configuration: Read
 
 ``` r
 config_read(
-  config_dir = system.file("extdata/config/network_complete", package =
+  config_dir = system.file("extdata/config/network_complete_mean-start-conc", package =
     "kwb.BerlinWaterModel.public"),
   file_encoding = "UTF-8"
 )
@@ -17,8 +17,8 @@ config_read(
 - config_dir:
 
   directory with configuration files (default:
-  system.file("extdata/config/network_complete", package =
-  "kwb.BerlinWaterModel")). It is mandatory that there are three files
+  system.file("extdata/config/network_complete_mean-start-conc", package
+  = "kwb.BerlinWaterModel")). It is mandatory that there are three files
   within this folder: "flows_in_out.csv", "outflows_multiple.csv" and
   "sections.csv"
 
