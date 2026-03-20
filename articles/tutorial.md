@@ -198,30 +198,30 @@ system.time(
 )
 #> Calculating flow for section 'Müggelsee' ... ok. (0.09 secs) 
 #> Calculating flow for section 'Seddinsee und Gosener Kanal' ... ok. (0.09 secs) 
-#> Calculating flow for section 'Erpe (NH-MF)' ... ok. (0.11 secs) 
+#> Calculating flow for section 'Erpe (NH-MF)' ... ok. (0.09 secs) 
 #> Calculating flow for section 'Langer See (Dahme)' ... ok. (0.09 secs) 
-#> Calculating flow for section 'Müggelspree 2' ... ok. (0.10 secs) 
-#> Calculating flow for section 'Dahme' ... ok. (0.09 secs) 
-#> Calculating flow for section 'MHG-Graben' ... ok. (0.09 secs) 
+#> Calculating flow for section 'Müggelspree 2' ... ok. (0.09 secs) 
+#> Calculating flow for section 'Dahme' ... ok. (0.10 secs) 
+#> Calculating flow for section 'MHG-Graben' ... ok. (0.10 secs) 
 #> Calculating flow for section 'Müggelspree' ... ok. (0.09 secs) 
 #> Calculating flow for section 'Wuhle' ... ok. (0.09 secs) 
-#> Calculating flow for section 'Rummelsburger See' ... ok. (0.09 secs) 
+#> Calculating flow for section 'Rummelsburger See' ... ok. (0.10 secs) 
 #> Calculating flow for section 'Spree 1' ...
 #> use dynamic & function for flow from section 'Dahme' to 'Spree 1'
-#> ok. (0.13 secs) 
+#> ok. (0.12 secs) 
 #> Calculating flow for section 'Britzer Verbindungskanal' ...
 #> use dynamic & function for flow from section 'Spree 1' to 'Britzer Verbindungskanal'
-#> ok. (0.12 secs) 
+#> ok. (0.13 secs) 
 #> Calculating flow for section 'Rudower Teltowkanal 1' ...
 #> use dynamic & function for flow from section 'Dahme' to 'Rudower Teltowkanal 1'
 #> ok. (0.12 secs) 
 #> Calculating flow for section 'Spree 2' ...
 #> use dynamic & function for flow from section 'Spree 1' to 'Spree 2'
-#> ok. (0.12 secs) 
+#> ok. (0.13 secs) 
 #> Calculating flow for section 'Neuköllner SF-Kanal' ...
 #> use dynamic & function for flow from section 'Britzer Verbindungskanal' to 'Neuköllner SF-Kanal'
-#> ok. (0.12 secs) 
-#> Calculating flow for section 'Panke' ... ok. (0.09 secs) 
+#> ok. (0.13 secs) 
+#> Calculating flow for section 'Panke' ... ok. (0.10 secs) 
 #> Calculating flow for section 'Rudower Teltowkanal 2' ... ok. (0.10 secs) 
 #> Calculating flow for section 'Spree 3' ...
 #> use dynamic & static value for flow from section 'Spree 2' to 'Spree 3'
@@ -229,14 +229,14 @@ system.time(
 #> Calculating flow for section 'BSS-Kanal' ...
 #> use dynamic & function for flow from section 'Spree 3' to 'BSS-Kanal'
 #> use dynamic & time series for flow from section 'Panke' to 'BSS-Kanal'
-#> ok. (0.15 secs) 
+#> ok. (0.16 secs) 
 #> Calculating flow for section 'Landwehrkanal' ...
 #> use dynamic & static value for flow from section 'Spree 2' to 'Landwehrkanal'
 #> ok. (0.12 secs) 
 #> Calculating flow for section 'Nordgraben' ...
 #> use dynamic & time series for flow from section 'Panke' to 'Nordgraben'
-#> ok. (0.12 secs) 
-#> Calculating flow for section 'Oberhavel 1' ... ok. (0.09 secs) 
+#> ok. (0.13 secs) 
+#> Calculating flow for section 'Oberhavel 1' ... ok. (0.10 secs) 
 #> Calculating flow for section 'Spree 4' ...
 #> use dynamic & function for flow from section 'Spree 3' to 'Spree 4'
 #> ok. (0.13 secs) 
@@ -244,12 +244,12 @@ system.time(
 #> Calculating flow for section 'Teltowkanal 1' ...
 #> use dynamic & function for flow from section 'Britzer Verbindungskanal' to 'Teltowkanal 1'
 #> ok. (0.13 secs) 
-#> Calculating flow for section 'Oberhavel 2' ... ok. (0.10 secs) 
+#> Calculating flow for section 'Oberhavel 2' ... ok. (0.09 secs) 
 #> Calculating flow for section 'Spree 5' ... ok. (0.10 secs) 
-#> Calculating flow for section 'Tegeler See' ... ok. (0.09 secs) 
+#> Calculating flow for section 'Tegeler See' ... ok. (0.10 secs) 
 #> Calculating flow for section 'Teltowkanal 2' ... ok. (0.09 secs) 
 #> Calculating flow for section 'Oberhavel 3' ... ok. (0.10 secs) 
-#> Calculating flow for section 'Spree 6' ... ok. (0.11 secs) 
+#> Calculating flow for section 'Spree 6' ... ok. (0.10 secs) 
 #> Calculating flow for section 'Teltowkanal 3' ... ok. (0.09 secs) 
 #> Calculating flow for section 'Unterhavel 1' ... ok. (0.10 secs) 
 #> Calculating flow for section 'Wannsee' ...
@@ -257,7 +257,7 @@ system.time(
 #> ok. (0.13 secs) 
 #> Calculating flow for section 'Unterhavel 2' ... ok. (0.09 secs)
 #>    user  system elapsed 
-#>    6.28    0.06    6.42
+#>    6.44    0.08    6.50
 
 ### Analyse Results
 flows_stats <- kwb.BerlinWaterModel.public::calculate_flow_stats(
@@ -363,7 +363,7 @@ system.time(
 #> Re-Calculating water quality 'forward' for branch_id: 5 (neg. flows in branch), section 'H08: Unterhavel 2'
 #> Re-Calculating water quality 'forward' for branch_id: 5 (neg. flows in branch), section 'Out: Outflow Potsdamer Havel'
 #>    user  system elapsed 
-#>   15.70    0.21   15.94
+#>   16.29    0.29   16.60
 
 ### Save qualities for all sections in XLSX
 openxlsx::write.xlsx(x = qualities_00_dynamic_reverse$conc, file = "qualities_00_dynamic_reverse_concentrations.xlsx")
