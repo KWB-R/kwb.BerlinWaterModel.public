@@ -51,12 +51,12 @@ calculate_flow <- function(df, input, shares_timeseries_wide = NULL, config, use
     shorten_ww_flow_id(col_flow_id = "target") %>%
     dplyr::pull(target)
 
-  missing_flow_ids <- !flow_ids[flow_ids != section_id_up] %in% names(input)
+  missing_flow_ids <- sapply(flow_ids[flow_ids != section_id_up], function(x) ! x %in% names(input))
 
   if (sum(missing_flow_ids) > 0) {
     stop(sprintf(
       "The following flow_ids are missing in the input dataset:\n%s",
-      paste0(flow_ids[missing_flow_ids], collapse = ", ")
+      paste0(names(missing_flow_ids[missing_flow_ids == TRUE]), collapse = ", ")
     ))
   }
 

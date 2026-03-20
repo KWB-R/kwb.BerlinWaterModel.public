@@ -9,7 +9,6 @@ S02;WW_FRI_K;Wasserwerk Friedrichshagen K-Galerie;;;;;0,83;;out;abstraction_WW;
 S03;ageb1_320;Regenabfluss in Langer See, Dahme und Große Krampe;0,244;5229069;788278;DWD_0433;;;in;rain_runoff;
 S04;WW_FRI_B;Wasserwerk Friedrichshagen B-Galerie;;;;;0,15;;out;abstraction_WW;
 S04;WW_FRI_C;Wasserwerk Friedrichshagen C-Galerie;;;;;0,95;;out;abstraction_WW;
-S04;WW_FRI_D;Wasserwerk Friedrichshagen D-Galerie;;;;;1;;out;abstraction_WW;
 S04;WW_FRI_E;Wasserwerk Friedrichshagen E-Galerie;;;;;0,85;;out;abstraction_WW;
 S04;WW_FRI_F;Wasserwerk Friedrichshagen F-Galerie;;;;;0,81;;out;abstraction_WW;
 S04;MgS_8.576;Zufluss_Spree_Fähre Rahnsdorf;;;;;;;in;inlet;
