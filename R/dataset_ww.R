@@ -2,7 +2,7 @@
 #'
 #' Dataset with waterworks abstractions per gallery
 #'
-#' @format A tibble with 17,141 rows and three columns
+#' @format A tibble with 828 rows and three columns
 #' \describe{
 #'   \item{date}{date}
 #'   \item{id}{id of WW gallery}

@@ -2,7 +2,7 @@
 #'
 #' Daily potential evaporation based on DWD 1x1 km raster data.
 #'
-#' @format A tibble with 7,670 rows and 10 columns:
+#' @format A tibble with 365 rows and 10 columns:
 #' \describe{
 #'   \item{file}{Name of the file from the DWD https/ftp server}
 #'   \item{date}{Date}

@@ -5,10 +5,10 @@
 \alias{rain}
 \title{Dataset: Rain (rain) with DWD rainfall data}
 \format{
-A tibble with 247,076 rows and two columns
+A tibble with 8,721 rows and two columns
 \describe{
 \item{datetime}{datetime}
-\item{DWD_0433}{rainfall in mm for DWD rainstation 0433}
+\item{DWD_0433}{hourly rainfall in mm for DWD rainstation 0433}
 }
 }
 \usage{

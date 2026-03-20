@@ -20,14 +20,15 @@ knitr::opts_chunk$set(
 ### Install R package from "dev" branch
 # remotes::install_github("kwb-r/kwb.BerlinWaterModel@dev")
 
-
 library(kwb.BerlinWaterModel.public)
+config_dir <- system.file("extdata/config/network_complete_mean-start-conc",
+                          package = "kwb.BerlinWaterModel.public")
 
-config <- kwb.BerlinWaterModel.public::config_read()
+config <- kwb.BerlinWaterModel.public::config_read(config_dir = config_dir)
+
+config <- kwb.BerlinWaterModel.public::add_rain_direct_and_evaporation(config)
 
 config <- kwb.BerlinWaterModel.public::add_tracers(config)
-
-config <- kwb.BerlinWaterModel.public::add_substances(config)
 
 network <- kwb.BerlinWaterModel.public::prepare_network(config)
 
@@ -47,35 +48,37 @@ inflows <- kwb.BerlinWaterModel.public::inflows %>%
   dplyr::select(- scaling_factor)
 
 ### Prepare input for "static" BF-shares
-input_list_bfs_static <- kwb.BerlinWaterModel.public::prepare_input(temporal_resolution = temporal_resolution,
-                                             config = config,
-                                             cso = cso,
-                                             inflows = inflows,
-                                             share_wwtp_sch_panke_1 = 0.1,
-                                             date_separation_panke_1_2 = "2015-06-30",
-                                             share_wwtp_sch_panke_2 = 0.9,
-                                             rain = rain,
-                                             ww = ww,
-                                             wwtp = wwtp,
-                                             bfshare_dynamic = FALSE,
-                                             date_min = "2002-01-01",
-                                             date_max = "2022-12-31")
+input_list_bfs_static <- kwb.BerlinWaterModel.public::prepare_input(
+  temporal_resolution = temporal_resolution,
+  config = config,
+  cso = inputs$cso,
+  inflows = inputs$inflows,
+  share_wwtp_sch_to_nordgraben_timeseries = TRUE,
+  rain = inputs$rain,
+  evapo_p = inputs$evapo_p,
+  ww = inputs$ww,
+  wwtp = inputs$wwtp,
+  bfshare_dynamic = FALSE,
+  date_min = "2019-01-01",
+  date_max = "2019-12-31"
+  )
 
 
 ### Prepare input for "dynamic" BF-shares
-input_list_bfs_dynamic <- kwb.BerlinWaterModel.public::prepare_input(temporal_resolution = temporal_resolution,
-                                                        config = config,
-                                                        cso = cso,
-                                                        inflows = inflows,
-                                                        share_wwtp_sch_panke_1 = 0.1,
-                                                        date_separation_panke_1_2 = "2015-06-30",
-                                                        share_wwtp_sch_panke_2 = 0.9,
-                                                        rain = rain,
-                                                        ww = ww,
-                                                        wwtp = wwtp,
-                                                        bfshare_dynamic = TRUE,
-                                                        date_min = "2002-01-01",
-                                                        date_max = "2022-12-31")
+input_list_bfs_dynamic <- kwb.BerlinWaterModel.public::prepare_input(
+  temporal_resolution = temporal_resolution,
+  config = config,
+  cso = inputs$cso,
+  inflows = inputs$inflows,
+  share_wwtp_sch_to_nordgraben_timeseries = TRUE,
+  rain = inputs$rain,
+  evapo_p = inputs$evapo_p,
+  ww = inputs$ww,
+  wwtp = inputs$wwtp,
+  bfshare_dynamic = TRUE,
+  date_min = "2019-01-01",
+  date_max = "2019-12-31"
+  )
 
 ```
 

@@ -1,11 +1,11 @@
 Package: kwb.BerlinWaterModel.public
 Title: R Package of Berlin Water Model
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: c(
-    person("Daniel", "Wicke", , "daniel.wicke@kompetenz-wasser.de", role = "aut",
-           comment = c(ORCID = "0000-0002-5722-5433")),
     person("Michael", "Rustler", , "michael.rustler@kompetenz-wasser.de", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0003-0647-7726")),
+    person("Daniel", "Wicke", , "daniel.wicke@kompetenz-wasser.de", role = "aut",
+           comment = c(ORCID = "0000-0002-5722-5433")),
     person("IMPETUS", role = "fnd"),
     person("Kompetenzzentrum Wasser Berlin gGmbH (KWB)", role = "cph")
   )
@@ -36,7 +36,9 @@ Imports:
     units
 Suggests: 
     covr,
+    DT,
     knitr,
+    openxlsx, 
     rmarkdown
 VignetteBuilder: 
     knitr

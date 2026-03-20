@@ -34,8 +34,8 @@ evapo_p_raw <- kwb.dwd::read_daily_data_over_shape(
   #file = shape_file,
   shape = lakes_berlin_sel,
   variable = "evapo_p",
-  from = "200201",
-  to = "202212"
+  from = "201901",
+  to = "201912"
   #to = "202212"
 )
 

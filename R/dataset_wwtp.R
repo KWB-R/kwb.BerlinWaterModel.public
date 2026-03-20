@@ -2,7 +2,7 @@
 #'
 #' Dataset with WWTP inflows
 #'
-#' @format A tibble with 1,152 rows and three columns
+#' @format A tibble with 4015 rows and three columns
 #' \describe{
 #'   \item{date}{date}
 #'   \item{id}{id of WWTP}
