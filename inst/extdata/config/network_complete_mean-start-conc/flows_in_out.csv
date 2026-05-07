@@ -96,7 +96,7 @@ H08;WW_BEE_lind;Wasserwerk Beelitzhof Galerie Lindwerder;;;;;0,48;;out;abstracti
 H08;WW_BEE_grfe;Wasserwerk Beelitzhof Galerie Großes Fenster;;;;;0,57;;out;abstraction_WW;
 H09;ageb1_220;Regenabfluss in Großer Wannsee;0,204;1589892;212026;DWD_0433;;;in;rain_runoff;
 H09;ageb1_230;Regenabfluss in Kleine Wannseekette;0,209;1103741;148528;DWD_0433;;;in;rain_runoff;
-H09;WW_BEE_rehw;Wasserwerk Beelitzhof Galerie Rehwiese;;;;;0,1;;out;abstraction_WW;
+H09;WW_BEE_rehw;Wasserwerk Beelitzhof Galerie Rehwiese;;;;;0,1;yes;out;abstraction_WW;
 H09;WW_BEE_wann;Wasserwerk Beelitzhof Galerie Wannsee;;;;;0,6;;out;abstraction_WW;
-H09;WW_BEE_wies;Wasserwerk Beelitzhof Galerie Wiesenleitung;;;;;0,5;;out;abstraction_WW;
+H09;WW_BEE_wies;Wasserwerk Beelitzhof Galerie Wiesenleitung;;;;;0,5;yes;out;abstraction_WW;
 H09;WW_BEE_GWA;Wasserwerk Beelitzhof Galerie (GWA);;;;;1;;out;abstraction_WW;
